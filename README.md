@@ -42,22 +42,57 @@ Although your friend has an excellent understanding of property prices in her ow
 * 2 - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
 
-## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision to validate it (them) 
+## Hypotheses and how to validate?
+* Size matters. Variables that are associated with the size of the house are positively correlated to sale price.
+  * We will examine correlations between attributes about the size of the house and the sale price.
+* Ratings of the quality and condition of the house reflect its value and thus its sale price.
+  * We will use the correlation between variables about the different ratings of the house and the sale price to validate this hypothesis.
+* Age of the house is expected to have significant influence on the sale price of the house.
+  * We study when the house was built and how expensive it is to test this hypothesis.
 
 
 ## Rationale to map the business requirements to the Data Visualizations and ML tasks
-* List your business requirements and a rationale to map them to the Data Visualizations and ML tasks
+* **Business Requirement 1:** Data Visualization and Correlation study
+  * We will inspect the sale price of the houses in the data and plot a histogram to understand its distribution.
+  * We will study the magnitudes and directions of correlation between the attributes and sale price of the houses. We will compute both Peason and Spearman correlations.
+  * We will plot the key variables against the sale price of the houses to illustrate the nature of relationship.
 
-
+* **Business Requirement 2:** Regression Analysis
+  * As the target variable we are interested to predict is continuous, we will do regression analysis. In case the performance of our regression model is poor, we may change this to a classification problem.
+  * Not all attributes will have the same effect on the sale price. We want to identify variables that contribute to the lion's share of the price so that our customer can maximize price by leveraging these factors. We will use PCA to identify these variables.
 ## ML Business Case
 * In the previous bullet, you potentially visualized a ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
+### Predict price
+##### Regression model
+* The target variable is sale price of houses. Given the continuous-valued target, we want to create an ML model that predicts the sale price of a house with various attributes. We will use a regression model, and it is a supervised machine learning problem because we have sale prices of the houses in our dataset.
+* Having caliberated the parameters of the ML model, we want to help users of this application to predict the sale prices of houses with different characteristics.
+* As performance metrics for the model, we will use
+  * an R2 score of at least 0.7.
+* The model will not be accepted if R2 is below 0.7. 
+
 
 
 ## Dashboard Design
 * List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
 * Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+### Page 1: Quick project summary
+In this page, we will provide a quick summary of
+* the project's key terms
+* the project dataset
+* the business requirements
+### Page 2: House prices
 
+
+### Page 3: Key attributes 
+
+
+### Page 4: Project hypotheses and validation
+
+
+### Page 5: Predict price
+
+
+### Page 6: PCA
 
 
 ## Unfixed Bugs
@@ -78,6 +113,14 @@ Although your friend has an excellent understanding of property prices in her ow
 
 ## Main Data Analysis and Machine Learning Libraries
 * Here you should list the libraries you used in the project and provide example(s) on how you used these libraries.
+* Numpy
+* Pandas
+* Scikit-learn
+* Matplot-lib
+* Seaborn
+* Jupyter
+* StreamLit
+
 
 
 ## Credits 
