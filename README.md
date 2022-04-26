@@ -62,6 +62,7 @@ Although your friend has an excellent understanding of property prices in her ow
   * Not all attributes will have the same effect on the sale price. We want to identify variables that contribute to the lion's share of the price so that our customer can maximize price by leveraging these factors. We will use PCA to identify these variables.
 ## ML Business Case
 * In the previous bullet, you potentially visualized a ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
+  * Note: a Business Case for each ML model considering the model objective, outcome, metrics, output, heuristic and training data, and the Dashboard Design.
 ### Predict price
 ##### Regression model
 * The target variable is sale price of houses. Given the continuous-valued target, we want to create an ML model that predicts the sale price of a house with various attributes. We will use a regression model, and it is a supervised machine learning problem because we have sale prices of the houses in our dataset.
