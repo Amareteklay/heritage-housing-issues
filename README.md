@@ -68,8 +68,8 @@ Although your friend has an excellent understanding of property prices in her ow
 * The target variable is sale price of houses. Given the continuous-valued target, we want to create an ML model that predicts the sale price of a house with various attributes. We will use a regression model, and it is a supervised machine learning problem because we have sale prices of the houses in our dataset.
 * Having caliberated the parameters of the ML model, we want to help users of this application to predict the sale prices of houses with different characteristics.
 * As performance metrics for the model, we will use
-  * an R2 score of at least 0.7.
-* The model will not be accepted if R2 is below 0.7. 
+  * an R2 score of at least 0.75.
+* The model will not be accepted if R2 is below 0.75. 
 
 
 
