@@ -23,7 +23,7 @@ def page_correlation_study_body():
     )
 
     # inspect data
-    if st.checkbox("Inspect Customer Base"):
+    if st.checkbox("Inspect Housing Data"):
         st.write(
             f"* The dataset has {df.shape[0]} rows and {df.shape[1]} columns, "
             f"find below the first 10 rows.")
@@ -31,6 +31,24 @@ def page_correlation_study_body():
         st.write(df.head(10))
 
     st.write("---")
+
+
+    # Correlation Study Summary
+    st.write(
+        f"* A correlation study was conducted in the notebook to better understand how "
+        f"the variables are correlated to Churn levels. \n"
+        f"The most correlated variable are: **{vars_to_study}**"
+    )
+
+
+    # Text based on "03 - House Prices" notebook - "Conclusions and Next steps" section
+    st.info(
+        f"We make the following observations from both the correlation analysis and the plots.\n"
+        f"* Higher values of 1stFlrSF, garage area, GrLivArea, MasVnrArea and TotalBsmtSF are associated with higher sale price.\n"
+        f"* Houses with recently built garages or recently added remods have higher prices than those of earlier ones.\n"  
+        f"* Higher Overall quality indicates higher sale prices but kitchen quality does not show clear pattern.\n" 
+    )
+
 
     df_eda = df.filter(vars_to_study + ['SalePrice'])
 
