@@ -28,8 +28,8 @@ def page_predict_price_body():
 	st.write(X_inheritted.filter(house_features).head())
 	
 	for i in range(X_inheritted.shape[0]):
-		predicted_price = predict_inheritted_house_price(X_inheritted.iloc[[i,]], house_features, price_pipe)
-		st.write(f"Row: {i} has predicted price of {predicted_price}.")
+		predict_inheritted_house_price(X_inheritted.iloc[[i,]], house_features, price_pipe)
+		
 
 	
 	# Generate Live Data
