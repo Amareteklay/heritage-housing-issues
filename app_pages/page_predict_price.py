@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
-from src.data_management import load_housing_data, load_pkl_file
-from src.machine_learning.predictive_analysis_ui import predict_price 
+from src.data_management import load_housing_data, load_heritage_data, load_pkl_file
+from src.machine_learning.predictive_analysis_ui import predict_price, predict_inheritted_house_price 
 
 def page_predict_price_body():
 	
@@ -19,6 +19,17 @@ def page_predict_price_body():
         f"* The client is interested in determining sales prices of four houses. "
 	)
 	st.write("---")
+
+	# Predict sales prices of inheritted houses
+
+	st.write(f"Predicting sales price of inheritted houses.")
+
+	X_inheritted = load_heritage_data()
+	st.write(X_inheritted.filter(house_features).head())
+	
+	for i in range(X_inheritted.shape[0]):
+		predicted_price = predict_inheritted_house_price(X_inheritted.iloc[[i,]], house_features, price_pipe)
+		st.write(f"Row: {i} has predicted price of {predicted_price}.")
 
 	
 	# Generate Live Data
