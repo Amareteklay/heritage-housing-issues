@@ -6,7 +6,7 @@ from src.machine_learning.predictive_analysis_ui import predict_price, predict_i
 def page_predict_price_body():
 	
 	# load predict tenure files
-	version = 'v1'
+	version = 'v3'
 	price_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")
 	house_features = (pd.read_csv(f"outputs/ml_pipeline/predict_price/{version}/X_train.csv")
 					.columns
@@ -56,6 +56,7 @@ def DrawInputsWidgets():
 
 	# load dataset
 	df = load_housing_data()
+	
 	percentageMin, percentageMax = 0.4, 2.0
 
     # we create input widgets only for 6 features	
