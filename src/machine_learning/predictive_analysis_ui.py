@@ -25,9 +25,11 @@ def predict_inheritted_house_price(X_inheritted, house_features, price_pipeline)
 	X_inheritted_price = X_inheritted.filter(house_features)
 
 	# predict
+
 	price_prediction_inheritted = price_pipeline.predict(X_inheritted_price)
 	# st.write(tenure_prediction_proba)
-
+	
+	this_price = price_prediction_inheritted[0]
 	# create a logic to display the results
 	
 	statement = (
@@ -36,3 +38,4 @@ def predict_inheritted_house_price(X_inheritted, house_features, price_pipeline)
 			)
 	
 	st.write(statement)
+	return this_price

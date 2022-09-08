@@ -34,3 +34,6 @@ def page_ml_predict_price_body():
     st.write(X_train.columns.to_list())
     st.image(price_feat_importance)
     st.write("---")
+
+
+    st.write("### Pipeline Performance")  

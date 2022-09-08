@@ -26,9 +26,12 @@ def page_predict_price_body():
 
 	X_inheritted = load_heritage_data()
 	st.write(X_inheritted.filter(house_features).head())
-	
+	summed_price = 0
 	for i in range(X_inheritted.shape[0]):
-		predict_inheritted_house_price(X_inheritted.iloc[[i,]], house_features, price_pipe)
+		pprice = predict_inheritted_house_price(X_inheritted.iloc[[i,]], house_features, price_pipe)
+		summed_price = summed_price + pprice
+	st.write(f"Summed price: {summed_price}")
+
 		
 
 	
