@@ -33,8 +33,7 @@ def predict_inheritted_house_price(X_inheritted, house_features, price_pipeline)
 	# create a logic to display the results
 	
 	statement = (
-			f"* The price of an inheritted house with the given attribute values is: **{price_prediction_inheritted[0]}**."
-			f"* The features used are: **{X_inheritted_price}**."
+			f"* Price of this house: **{price_prediction_inheritted[0]}**.\n"
 			)
 	
 	st.write(statement)

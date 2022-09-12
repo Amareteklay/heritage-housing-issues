@@ -7,9 +7,9 @@ def page_summary_body():
     # text based on README file - "Dataset Content" section
     st.info(
         f"**Project Terms & Jargons**\n\n"
-        f"* Sales price of a house refers to the current market price of a house with certain attributes.\n"
-        f"* Inherrited house is a house that the client inheritted from grandparents.\n"
-        f"* Summed price was determined by adding the sales prices of the four inheritted houses.\n\n"
+        f"* **Sales price** of a house refers to the current market price of a house with certain attributes.\n"
+        f"* **Inherrited house** is a house that the client inheritted from grandparents.\n"
+        f"* **Summed price** was determined by adding the sales prices of the four inheritted houses.\n\n"
         f"**Project Dataset**\n"
         f"* The project dataset comes from housing price database from Ames, Iowa. It is available in Kaggle via Code Institute, and includes sales price (the target) and features that show a house's age (year built, year remodeled), property size (first floor area, second floor area, garaze area) and quality assessments."
         )

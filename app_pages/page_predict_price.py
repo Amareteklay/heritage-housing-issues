@@ -16,7 +16,8 @@ def page_predict_price_body():
 
 	st.write("### House Price Predictor")
 	st.info(
-        f"* The client is interested in determining sales prices of four houses. "
+       f"* The client is interested in predicting the house sale prices from her 4 inherited houses,"
+       f" and any other house in Ames, Iowa."
 	)
 	st.write("---")
 
@@ -30,7 +31,9 @@ def page_predict_price_body():
 	for i in range(X_inheritted.shape[0]):
 		pprice = predict_inheritted_house_price(X_inheritted.iloc[[i,]], house_features, price_pipe)
 		summed_price = summed_price + pprice
-	st.write(f"Summed price: {summed_price}")
+	st.write(f"* Summed price: **{summed_price}** \n"
+	         f"* Features used: **{X_inheritted.columns}**."
+			 )
 
 		
 
