@@ -2,12 +2,13 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from src.data_management import load_housing_data, load_pkl_file
+from src.machine_learning.evaluate_reg import regression_performance
 
 
 def page_ml_predict_price_body():
 
     # load price pipeline files
-    version = 'v3'
+    version = 'v1'
     price_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")
     price_feat_importance = plt.imread(f"outputs/ml_pipeline/predict_price/{version}/features_importance.png")
     X_train = pd.read_csv(f"outputs/ml_pipeline/predict_price/{version}/X_train.csv")
@@ -36,4 +37,7 @@ def page_ml_predict_price_body():
     st.write("---")
 
 
-    st.write("### Pipeline Performance")  
+    st.write("### Pipeline Performance")
+    regression_performance(X_train=X_train, y_train=y_train,
+                        X_test=X_test, y_test=y_test,
+                        pipeline=price_pipe)  
