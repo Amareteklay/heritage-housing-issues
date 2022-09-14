@@ -14,7 +14,7 @@ def page_correlation_study_body():
 
     df = load_housing_data()
 
-    vars_to_study = ['1stFlrSF', 'GarageArea', 'GrLivArea', 'KitchenQual', 'MasVnrArea', 'OverallQual', 'TotalBsmtSF', 'YearBuilt', 'YearRemodAdd']
+    vars_to_study = ['1stFlrSF', 'GarageArea', 'GrLivArea', 'KitchenQual', 'MasVnrArea', 'OpenPorchSF', 'OverallQual', 'TotalBsmtSF', 'YearBuilt', 'YearRemodAdd']
 
     st.write("### Housing Prices Correlation Study")
     st.info(
@@ -59,8 +59,8 @@ def page_correlation_study_body():
 
 
 def house_price_per_variable(df_eda):
-    vars_to_study = ['1stFlrSF', 'GarageArea', 'GarageYrBlt', 'GrLivArea', 'KitchenQual', 'MasVnrArea', 'OverallQual', 'TotalBsmtSF', 'YearBuilt', 'YearRemodAdd']
-    time = ['GarageYrBlt', 'YearBuilt', 'YearRemodAdd']
+    vars_to_study = ['1stFlrSF', 'GarageArea', 'GrLivArea', 'KitchenQual', 'MasVnrArea', 'OpenPorchSF', 'OverallQual', 'TotalBsmtSF', 'YearBuilt', 'YearRemodAdd']
+    time = ['YearBuilt', 'YearRemodAdd']
     target_var = 'SalePrice'
     
     for col in vars_to_study:
