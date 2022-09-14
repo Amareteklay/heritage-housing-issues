@@ -7,7 +7,7 @@ def page_predict_price_body():
 	
 	# load predict tenure files
 	version = 'v1'
-	price_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")
+	regression_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")
 	house_features = (pd.read_csv(f"outputs/ml_pipeline/predict_price/{version}/X_train.csv")
 					.columns
 					.to_list()
@@ -29,7 +29,7 @@ def page_predict_price_body():
 	st.write(X_inheritted.filter(house_features).head())
 	summed_price = 0
 	for i in range(X_inheritted.shape[0]):
-		pprice = predict_inheritted_house_price(X_inheritted.iloc[[i,]], house_features, price_pipe)
+		pprice = predict_inheritted_house_price(X_inheritted.iloc[[i,]], house_features, regression_pipe)
 		summed_price = summed_price + pprice
 	st.write(f"* Summed price: **{summed_price}** \n"
 	         f"* Features used: **{X_inheritted.columns}**."
@@ -45,10 +45,10 @@ def page_predict_price_body():
 
 	# predict on live data
 	if st.button("Run Predictive Analysis"): 
-		price_prediction = predict_price(X_live, house_features, price_pipe)
+		price_prediction = predict_price(X_live, house_features, regression_pipe)
 		
 		if price_prediction == 1:
-			predict_price(X_live, house_features, price_pipe)
+			predict_price(X_live, house_features, regression_pipe)
 			
 
 
