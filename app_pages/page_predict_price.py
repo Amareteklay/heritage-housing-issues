@@ -44,7 +44,7 @@ def page_predict_price_body():
 
 
 	# predict on live data
-	if st.button("Run Predictive Analysis"): 
+	if st.button("Predict Sale Price"): 
 		price_prediction = predict_price(X_live, house_features, regression_pipe)
 		
 		if price_prediction == 1:

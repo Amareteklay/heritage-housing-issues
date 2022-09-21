@@ -4,7 +4,7 @@ HouPP is a Machine Learning project that helps users predict the sales prices of
 [HouPP is live on Heroku](https://houpp.herokuapp.com/).
 
 
-## Dataset Content
+## 1. Dataset Content
 * The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
 * The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa; indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
 
@@ -39,7 +39,7 @@ HouPP is a Machine Learning project that helps users predict the sales prices of
 
 
 
-## Business Requirements
+## 2. Business Requirements
 As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximizing the sales price for the inherited properties.
 
 Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that
@@ -48,7 +48,7 @@ Although your friend has an excellent understanding of property prices in her ow
 * 2 - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
 
-## Hypotheses and how to validate?
+## 3. Hypotheses and how to validate?
 * Size matters. Variables that are associated with the size of the house are positively correlated to sale price.
   * We will examine correlations between attributes about the size of the house and the sale price.
 * Ratings of the quality and condition of the house reflect its value and thus its sale price.
@@ -57,7 +57,7 @@ Although your friend has an excellent understanding of property prices in her ow
   * We study when the house was built and how expensive it is to test this hypothesis.
 
 
-## Rationale to map the business requirements to the Data Visualizations and ML tasks
+## 4. Rationale to map the business requirements to the Data Visualizations and ML tasks
 * **Business Requirement 1:** Data Visualization and Correlation study
   * We will inspect the sale price of the houses in the data and plot a histogram to understand its distribution.
   * We will study the magnitudes and directions of correlation between the attributes and sale price of the houses. We will compute both Peason and Spearman correlations.
@@ -66,7 +66,8 @@ Although your friend has an excellent understanding of property prices in her ow
 * **Business Requirement 2:** Regression Analysis
   * As the target variable we are interested to predict is continuous, we will do regression analysis. In case the performance of our regression model is poor, we may change this to a classification problem.
   * Not all attributes will have the same effect on the sale price. We want to identify variables that contribute to the lion's share of the price so that our customer can maximize price by leveraging these factors. We will use PCA to identify these variables.
-## ML Business Case
+## 5. ML Business Case
+(**Note terminologies**)
 * In the previous bullet, you potentially visualized a ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
   * Note: a Business Case for each ML model considering the model objective, outcome, metrics, output, heuristic and training data, and the Dashboard Design.
 ### Predict price
@@ -79,7 +80,7 @@ Although your friend has an excellent understanding of property prices in her ow
 
 
 
-## Dashboard Design
+## 6. Dashboard Design
 * List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
 * Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
 ### Page 1: Quick project summary
@@ -94,22 +95,22 @@ In this page, we will provide a quick summary of
 
 
 ### Page 4: Project hypotheses and validation
+(**At least 3**)
+* 1. One of the most important attributes that determine the sales price of a house is the property size. This can include the interior and exterior surface area of the property. 
+  * We hypothesize that houses with a lot of space have higher prices.
 
-* One of the most important attributes that determine the sales price of a house is the property size. This can include the interior and exterior surface area of the property. We hypothesize that houses with a lot of space have higher prices.
-
-* The ages of a house and its sales price might be related. Specifically, recently built houses are likely to have modern facilities and thus higher sales prices.
+* 2. The ages of a house and its sales price might be related. Specifically, recently built houses are likely to have modern facilities and thus higher sales prices.
+  * We noted that modern houses have higher prices(**Edit later**).
 
 ### Page 5: Predict price
 
 * The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
 
-### Page 6: PCA
 
-
-## Unfixed Bugs
+## 7. Unfixed Bugs
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
-## Deployment
+## 8. Deployment
 ### Heroku
 
 * The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
@@ -122,7 +123,7 @@ In this page, we will provide a quick summary of
 5. The deployment process should happen smoothly in case all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 
 
-## Main Data Analysis and Machine Learning Libraries
+## 9. Main Data Analysis and Machine Learning Libraries
 * Here you should list the libraries you used in the project and provide example(s) on how you used these libraries.
 * Numpy
 * Pandas
@@ -134,7 +135,7 @@ In this page, we will provide a quick summary of
 
 
 
-## Credits 
+## 10. Credits 
 
 * In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
@@ -152,6 +153,6 @@ In this page, we will provide a quick summary of
 
 
 
-## Acknowledgements (optional)
+### Acknowledgements (optional)
 * In case you would like to thank the people that provided support through this project.
 
