@@ -11,7 +11,7 @@ def page_summary_body():
         f"* **Inherrited house** is a house that the client inheritted from grandparents.\n"
         f"* **Summed price** was determined by adding the sales prices of the four inheritted houses.\n\n"
         f"**Project Dataset**\n"
-        f"* The project dataset comes from housing price database from Ames, Iowa. It is available in Kaggle via Code Institute, and includes sales price (the target) and features that show a house's age (year built, year remodeled), property size (first floor area, second floor area, garaze area) and quality assessments."
+        f"* The project dataset comes from housing price database from Ames, Iowa. It is available in [Kaggle via Code Institute](https://www.kaggle.com/codeinstitute/housing-prices-data), and includes sales price (the target) and features that show a house's age (year built, year remodeled), property size (first floor area, second floor area, garaze area) and quality assessments."
         )
 
     # Link to README file, so the users can have access to full project documentation

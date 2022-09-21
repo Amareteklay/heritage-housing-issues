@@ -95,9 +95,13 @@ In this page, we will provide a quick summary of
 
 ### Page 4: Project hypotheses and validation
 
+* One of the most important attributes that determine the sales price of a house is the property size. This can include the interior and exterior surface area of the property. We hypothesize that houses with a lot of space have higher prices.
+
+* The ages of a house and its sales price might be related. Specifically, recently built houses are likely to have modern facilities and thus higher sales prices.
 
 ### Page 5: Predict price
 
+* The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
 
 ### Page 6: PCA
 
