@@ -204,13 +204,17 @@ This page shows
 
 ### **Page 4: Predict House price**
 
-* The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+* State business requirement 2
+
+  * The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
 
 * This page displays the 4 houses' attributes and their respective predicted sale price. 
 
 * It displays a message informing the summed predicted price for all 4 inherited houses. 
 
-* Interactive input widgets that allow a user to provide real-time house data to predict the sale price.
+* Set of interactive input widgets that allow a user to provide real-time house data to predict the sale price.
+
+* "Predict Sale Price" button that serves the new house data to our ML pipelines, and predicts the sale price of the house.
 
 ### **Page 5: ML: House Price Predictor**
 
@@ -286,12 +290,9 @@ This page presents:
  
 ### **Content**
 
-- The outline of this documentation was taken from the accompanying (to the project) code repository provided by the Code Institute.  
+- The outline of this documentation was taken from the accompanying (to the project) [code repository](https://github.com/Code-Institute-Solutions/milestone-project-heritage-housing-issues) provided by the [Code Institute](https://codeinstitute.net).  
 
-- 
-
-- The icon in the dashboard app was taken from [Font Awesome](https://fontawesome.com/) 
-
+- The icon in the dashboard app was taken from [this page](https://twemoji.maxcdn.com/2/test/preview.html) 
 
 ### **Acknowledgements**
 
