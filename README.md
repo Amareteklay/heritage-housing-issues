@@ -142,18 +142,32 @@ In order to address the business requirements, we have the following epics and u
 
   * Note: a Business Case for each ML model considering the model objective, outcome, metrics, output, heuristic and training data, and the Dashboard Design.
 
-### Predict price
-##### Regression model
+### Predict Sale Price
+#### Regression Model
 
-* The target variable is sale price of houses. Given the continuous-valued target, we want to create an ML model that predicts the sale price of a house with various attributes. We will use a regression model, and it is a supervised machine learning problem because we have sale prices of the houses in our dataset.
+* We want an ML model to predict sale price of a house with several attributes. As our target variable is a discrete number, we consider a **regression model**, which is supervised and uni-dimensional.
 
-* Having caliberated the parameters of the ML model, we want to help users of this application to predict the sale prices of houses with different characteristics.
+* Our ideal outcome is to provide our client with reliable insight into house attributes that maximize its sale price.
 
-* As performance metrics for the model, we will use
+* The model success metrics are
 
-  * an R2 score of at least 0.75.
+	* At least 0.75 for R2 score, on train and test set
 
-* The model will not be accepted if R2 is below 0.75. 
+	* The ML model is considered a failure if:
+
+		* for a given house, the model's predictions are off more than 25% of the time. For example, if the model predicts the sale price of a house to be XXX but the actual price is YYY.
+
+* The output is defined as a continuous value for sale price in USD. It is assumed that this model will predict sale price of a house whose relevant attributes are known. Inherited houses have known attributes, and their sale prices are predicted by the model. For live prediction of sale price of a house other than the four inherited houses, the user can enter the required values for the relevant features and get the prediction in real-time.
+
+* Heuristics: ?? .
+
+* The training data to fit the model come from a public dataset in Ames, Iowa. This dataset contains about 1.5 thousand house price records.
+
+	* Train data - filter data where Churn == 1, then drop Churn variable. 
+
+  * Target: tenure 
+
+  * features: all other variables, but total charges and customerID
 
 
 ## **6. Dashboard Design**
@@ -253,7 +267,7 @@ This page shows a quick summary of
 
 - Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
 
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/) 
 
 ### Media
 
