@@ -1,12 +1,14 @@
-# HouPP: Housing Price Predictor
+# **HouPP: Housing Price Predictor**
 
-HouPP is a Machine Learning project that helps users predict the sales prices of houses taking the houses' attributes as inputs.
-[HouPP is live on Heroku](https://houpp.herokuapp.com/).
+HouPP (Housing Price Predictor) is a Machine Learning project that helps users to predict the sales prices of houses taking the houses' attributes as inputs.
+The dashboard for [HouPP is hosted on Heroku](https://houpp.herokuapp.com/).
 
 
-## 1. Dataset Content
-* The dataset is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
-* The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa; indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
+## **1. Dataset Content**
+* The dataset for this project is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
+* The dataset has almost 1.5 thousand rows and represents housing records from Ames, Iowa. The dataset has 22 features indicating house profile (Floor Area, Basement, Garage, Kitchen, Lot, Porch, Wood Deck, Year Built) and its respective sale price for houses built between 1872 and 2010.
+
+The table below indicates the variables, their description and units of measurement. We note that some variables are numerical while others are categorical.
 
 |Variable|Meaning|Units|
 |:----|:----|:----|
@@ -34,12 +36,19 @@ HouPP is a Machine Learning project that helps users predict the sales prices of
 |YearBuilt|Original construction date|1872 - 2010|
 |YearRemodAdd|Remodel date (same as construction date if no remodeling or additions)|1950 - 2010|
 |SalePrice|Sale Price|34900 - 755000|
+#
 
 
 
+### **Project Terms and Jargon**
 
+* **Sale price** of a house refers to the current market price of a house with certain attributes.
 
-## 2. Business Requirements
+* **Inherrited house** is a house that the client inheritted from grandparents.
+
+* **Summed price** is the total of the sale prices of the four inheritted houses.
+
+## **2. Business Requirements**
 As a good friend, you are requested by your friend, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, to  help in maximizing the sales price for the inherited properties.
 
 Although your friend has an excellent understanding of property prices in her own state and residential area, she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. What makes a house desirable and valuable where she comes from might not be the same in Ames, Iowa. She found a public dataset with house prices for Ames, Iowa, and will provide you with that
@@ -68,12 +77,11 @@ In order to address the business requirements, we have the following epics and u
 * **US7:** As a user, I want to see relevant plots so that I can visualize the relationships between sale price and other features.
 * **US8:** As a user, I want to have access to the data cleaning and preparation pipeline so that I can quickly predict sale price without reinventing the wheel.
 * **US9:** As a user, I want to know the source and content of the data used in training the model so that I can be confident about the quality of the trained model.
-* **US10:** As a user, I want to know the project hypotheses and how they were validated so that I understand 
-### Tasks
+* **US10:** As a user, I want to know the project hypotheses and how they were validated so that I get a deeper understand of the mechanisms that determine sale price. 
 
 
 
-## 3. Hypotheses and how to validate?
+## **3. Hypotheses and validation**
 * Size matters. Variables that are associated with the size of the house are positively correlated to sale price.
   * We will examine correlations between attributes about the size of the house and the sale price.
 * Ratings of the quality and condition of the house reflect its value and thus its sale price.
@@ -82,7 +90,7 @@ In order to address the business requirements, we have the following epics and u
   * We study when the house was built and how expensive it is to test this hypothesis.
 
 
-## 4. Rationale to map the business requirements to the Data Visualizations and ML tasks
+## **4. Rationale to map the business requirements to the Data Visualizations and ML tasks**
 * **Business Requirement 1:** Data Visualization and Correlation study
   * We will inspect the sale price of the houses in the data and plot a histogram to understand its distribution.
   * We will study the magnitudes and directions of correlation between the attributes and sale price of the houses. We will compute both Peason and Spearman correlations.
@@ -91,7 +99,7 @@ In order to address the business requirements, we have the following epics and u
 * **Business Requirement 2:** Regression Analysis
   * As the target variable we are interested to predict is continuous, we will do regression analysis. In case the performance of our regression model is poor, we may change this to a classification problem.
   * Not all attributes will have the same effect on the sale price. We want to identify variables that contribute to the lion's share of the price so that our customer can maximize price by leveraging these factors. We will use PCA to identify these variables.
-## 5. ML Business Case
+## **5. ML Business Case**
 (**Note terminologies**)
 * In the previous bullet, you potentially visualized a ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
   * Note: a Business Case for each ML model considering the model objective, outcome, metrics, output, heuristic and training data, and the Dashboard Design.
@@ -105,7 +113,7 @@ In order to address the business requirements, we have the following epics and u
 
 
 
-## 6. Dashboard Design
+## **6. Dashboard Design**
 * List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
 * Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
 ### Page 1: Quick project summary
@@ -137,10 +145,10 @@ This page shows a quick summary of
 * A technical page displaying your model performance. If you deployed an ML pipeline, you have to display your pipeline steps.
 
 
-## 7. Unfixed Bugs
+## **7. Unfixed Bugs**
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
-## 8. Deployment
+## **8. Deployment**
 ### Heroku
 
 * The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
@@ -153,7 +161,7 @@ This page shows a quick summary of
 5. The deployment process should happen smoothly in case all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
 
 
-## 9. Main Data Analysis and Machine Learning Libraries
+## **9. Main Data Analysis and Machine Learning Libraries**
 * Here you should list the libraries you used in the project and provide example(s) on how you used these libraries.
 * Numpy
 * Pandas
@@ -165,7 +173,7 @@ This page shows a quick summary of
 
 
 
-## 10. Credits 
+## **10. Credits**
 
 * In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
