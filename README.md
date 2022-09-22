@@ -136,14 +136,13 @@ In order to address the business requirements, we have the following epics and u
   * The [Modeling and Evaluation - Predict House Prices notebook](https://github.com/Amareteklay/heritage-housing-issues/blob/main/jupyter_notebooks/05%20-%20Modeling%20and%20Evaluation%20-%20Predict%20House%20Prices.ipynb) handles this business requirement.
 
 ## **5. ML Business Case**
-(**Note terminologies**)
 
 * In the previous bullet, you potentially visualized a ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
 
   * Note: a Business Case for each ML model considering the model objective, outcome, metrics, output, heuristic and training data, and the Dashboard Design.
 
-### Predict Sale Price
-#### Regression Model
+### **Predict Sale Price**
+#### **Regression Model**
 
 * We want an ML model to predict sale price of a house with several attributes. As our target variable is a discrete number, we consider a **regression model**, which is supervised and uni-dimensional.
 
@@ -163,11 +162,11 @@ In order to address the business requirements, we have the following epics and u
 
 * The training data to fit the model come from a public dataset in Ames, Iowa. This dataset contains about 1.5 thousand house price records.
 
-	* Train data - filter data where Churn == 1, then drop Churn variable. 
+	* Train data: drop variables EnclosedPorch and WooddeckSF because each has more than 75% missing values. 
 
-  * Target: tenure 
+  * Target: sale price 
 
-  * features: all other variables, but total charges and customerID
+  * features: all other variables, except 
 
 
 ## **6. Dashboard Design**
@@ -175,6 +174,7 @@ In order to address the business requirements, we have the following epics and u
 * List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
 
 * Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
+
 ### Page 1: Quick project summary
 
 This page shows a quick summary of
@@ -185,22 +185,25 @@ This page shows a quick summary of
 
 * the business requirements
 
-### Page 2: House prices
+### Page 2: House prices Correlation Study
 
 * A page listing findings related to which features have the strongest correlation to the house sale price.
 
 ### Page 3: Project hypotheses and validation
 
-(**At least 3**)
-* 1. One of the most important attributes that determine the sales price of a house is the property size. This can include the interior and exterior surface area of the property. 
+1. Size matters. Variables that are associated with the size of the house are positively correlated to sale price.
 
-  * We hypothesize that houses with a lot of space have higher prices.
+   * We will examine correlations between attributes about the size of the house and the sale price.
 
-* 2. The ages of a house and its sales price might be related. Specifically, recently built houses are likely to have modern facilities and thus higher sales prices.
+2. Ratings of the quality and condition of the house reflect its value and thus higher ratings indicate higher sale price.
 
-  * We noted that modern houses have higher prices(**Edit later**).
+   * We will use the correlation between variables about the different ratings of the house and the sale price to validate this hypothesis.
 
-### Page 4: Predict price
+3. Age of the house is expected to have significant influence on the sale price of the house.
+
+   * We study when the house was built and how expensive it is to test this hypothesis.
+
+### Page 4: Predict House price
 
 * The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
 
@@ -210,18 +213,23 @@ This page shows a quick summary of
 
 * Interactive input widgets that allow a user to provide real-time house data to predict the sale price.
 
-### Page 5: ML Pipeline
+### Page 5: ML: House Price Predictor
 
-* A technical page displaying your model performance. If you deployed an ML pipeline, you have to display your pipeline steps.
+* A technical page displaying model performance. 
+
+* Displays ML pipeline steps.
 
 ## **7. Unfixed Bugs**
 
 * You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
 ## **8. Deployment**
-### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
+### **Heroku**
+
+* The App live link is: https://houpp.herokuapp.com/
+
+  * **Note:** *At the time of writing this document, Heroku has notified users that apps in the free tier may not be served as of 28th November 2022. So the above link may not work.*
 
 * The project was deployed to Heroku using the following steps.
 
