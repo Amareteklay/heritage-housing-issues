@@ -214,13 +214,19 @@ This page shows
 
 ### **Page 5: ML: House Price Predictor**
 
-* A technical page displaying model performance. 
+This page presents:
 
-* Displays ML pipeline steps.
+* considerations and conclusions after the pipeline was trained
+
+* the ML pipeline steps
+
+* feature importance (both a list and a plot)
+
+* pipeline performance of the regression model
 
 ## **7. Unfixed Bugs**
 
-* You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+* There were no known unfixed bugs in this project.
 
 ## **8. Deployment**
 
@@ -245,46 +251,49 @@ This page shows
 
 ## **9. Main Data Analysis and Machine Learning Libraries**
 
-* Here you should list the libraries you used in the project and provide example(s) on how you used these libraries.
+* Here is a list of the libraries I used in the project. The version number of each library can be found in the [requirements file](https://github.com/Amareteklay/heritage-housing-issues/blob/main/requirements.txt) of this project.
 
-* Numpy
+* Numpy: 
 
-* Pandas
+* Pandas: to convert CSV data to DataFrame and make data management and manipulation with the help of builtin functionalities easier. 
 
-* Scikit-learn
+* Scikit-learn: was used to train and evaluate the ML model that was then used to predict sale price. The training involves cross validation and hyperparameter optimization in an effort to identify the most appropriate model and specify the optimal parameters that enhance model performance.
 
-* Matplot-lib
+* Matplot-lib: 
 
-* Seaborn
+* Seaborn: 
 
-* Jupyter
+* Jupyter: an interactive environment to create the notebooks where I collect data, clean the data, conduct correlation study, do feature engineering, train and evaluate ML model. 
 
-* StreamLit
+* StreamLit: to create a dashboard with important information organized in separate pages and an interactive UI for predicting sale price of a house.
 
+* pandas-profiling
+* plotly
+* ppscore
+* feature-engine
+* imbalanced-learn
+* xgboost
+* yellowbrick
 
 ## **10. Credits**
+ 
+### **Code**
 
-* In this section you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism.
+- I have reused and adapted code from different sections of the course as well as the walk through projects.
 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+- Specific locations of the sources of the code are referred to in inline comments and doc strings in each notebook or python file.
 
+ 
 ### **Content**
 
-- The text for the Home page was taken from Wikipedia Article A
+- The outline of this documentation was taken from the accompanying (to the project) code repository provided by the Code Institute.  
 
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+- 
 
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/) 
-
-### **Media**
-
-- The photos used on the home and sign up page are from This Open Source site
-
-- The images used for the gallery page were taken from this other open source site
-
+- The icon in the dashboard app was taken from [Font Awesome](https://fontawesome.com/) 
 
 
 ### **Acknowledgements**
 
-* 
+* I would like to thank my mentor, Mo Shami, for his kind support and inspiring comments.
 
