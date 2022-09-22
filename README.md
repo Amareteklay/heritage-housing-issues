@@ -118,28 +118,24 @@ In order to address the business requirements, we have the following epics and u
 
 * **Business Requirement 1:** Data Visualization and Correlation study
 
-  * We inspected the sale price of the houses in the data and plotted a histogram to understand its distribution.
+  * We will inspect the sale price of the houses in the data and plot a histogram to understand its distribution.
 
-  * We have studies the magnitudes and directions of correlation between the attributes and sale price of the houses. We computed both Peason and Spearman correlations.
+  * We will study the magnitudes and directions of correlation between the attributes and sale price of the houses. We will compute both Peason and Spearman correlations.
 
-  * We have plotted the key variables against the sale price of the houses to illustrate the nature of relationship.
+  * We will plot the key variables against the sale price of the houses to illustrate the nature of relationship.
 
   * The [correlation study notebook](https://github.com/Amareteklay/heritage-housing-issues/blob/main/jupyter_notebooks/03%20-%20Correlation_Study.ipynb) handles this business requirement.
 
 
 * **Business Requirement 2:** Regression Analysis
 
-  * As the target variable we are interested to predict is continuous, we used regression analysis to address this business requirement. In case the performance of our regression model is poor, we may change this to a classification problem.
+  * As the target variable we are interested to predict is continuous, we will use regression analysis to address this business requirement. In case the performance of our regression model is poor, we may change this to a classification problem.
 
-  * Not all attributes will have the same effect on the sale price. We want to identify variables that contribute to the lion's share of the price so that our customer can maximize price by leveraging these factors. We will use PCA to identify these variables.
+  * Not all attributes will have the same effect on the sale price. We want to identify variables that contribute to the lion's share of the price so that our customer can maximize price by leveraging these factors. We may use PCA to identify these variables.
 
   * The [Modeling and Evaluation - Predict House Prices notebook](https://github.com/Amareteklay/heritage-housing-issues/blob/main/jupyter_notebooks/05%20-%20Modeling%20and%20Evaluation%20-%20Predict%20House%20Prices.ipynb) handles this business requirement.
 
 ## **5. ML Business Case**
-
-* In the previous bullet, you potentially visualized a ML task to answer a business requirement. You should frame the business case using the method we covered in the course 
-
-  * Note: a Business Case for each ML model considering the model objective, outcome, metrics, output, heuristic and training data, and the Dashboard Design.
 
 ### **Predict Sale Price**
 #### **Regression Model**
@@ -171,25 +167,28 @@ In order to address the business requirements, we have the following epics and u
 
 ## **6. Dashboard Design**
 
-* List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
-
-* Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
-
-### Page 1: Quick project summary
+### **Page 1: Quick project summary**
 
 This page shows a quick summary of
 
-* the project's key terms
+* the project's key terms and jargon
 
 * the project dataset
 
 * the business requirements
 
-### Page 2: House prices Correlation Study
+### **Page 2: House prices Correlation Study**
 
-* A page listing findings related to which features have the strongest correlation to the house sale price.
+This page shows
+* the business requirement that was handled by correlation study.
+* a checkbox for inspecting the dataset
+* a listing of findings related to which features have the strongest correlation to the house sale price.
+* a checkbox for displaying plots of sale price and each of the features that have strong correlation. This section of the page displays:
+  * scatter plots of sale price and each of the continuous numerical features
+  * box plots of sale price and each of the categorical features
+  * line graphs of sale price and each of the time variables
 
-### Page 3: Project hypotheses and validation
+### **Page 3: Project hypotheses and validation**
 
 1. Size matters. Variables that are associated with the size of the house are positively correlated to sale price.
 
@@ -203,7 +202,7 @@ This page shows a quick summary of
 
    * We study when the house was built and how expensive it is to test this hypothesis.
 
-### Page 4: Predict House price
+### **Page 4: Predict House price**
 
 * The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
 
@@ -213,7 +212,7 @@ This page shows a quick summary of
 
 * Interactive input widgets that allow a user to provide real-time house data to predict the sale price.
 
-### Page 5: ML: House Price Predictor
+### **Page 5: ML: House Price Predictor**
 
 * A technical page displaying model performance. 
 
@@ -269,7 +268,7 @@ This page shows a quick summary of
 
 * You can break the credits section up into Content and Media, depending on what you have included in your project. 
 
-### Content 
+### **Content**
 
 - The text for the Home page was taken from Wikipedia Article A
 
@@ -277,7 +276,7 @@ This page shows a quick summary of
 
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/) 
 
-### Media
+### **Media**
 
 - The photos used on the home and sign up page are from This Open Source site
 
@@ -285,7 +284,7 @@ This page shows a quick summary of
 
 
 
-### Acknowledgements (optional)
+### **Acknowledgements**
 
-* In case you would like to thank the people that provided support through this project.
+* 
 
