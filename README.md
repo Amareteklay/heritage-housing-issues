@@ -109,17 +109,15 @@ In order to address the business requirements, we have the following epics and u
 * List all dashboard pages and its content, either block of information or widgets, like: buttons, checkbox, image, or any other item that your dashboard library supports.
 * Eventually, during the project development, you may revisit your dashboard plan to update a give feature (for example, in the beginning of the project you were confident you would use a given plot to display an insight but eventually you needed to use another plot type)
 ### Page 1: Quick project summary
-In this page, we will provide a quick summary of
+This page shows a quick summary of
 * the project's key terms
 * the project dataset
 * the business requirements
 ### Page 2: House prices
 
+* A page listing findings related to which features have the strongest correlation to the house sale price.
 
-### Page 3: Key attributes 
-
-
-### Page 4: Project hypotheses and validation
+### Page 3: Project hypotheses and validation
 (**At least 3**)
 * 1. One of the most important attributes that determine the sales price of a house is the property size. This can include the interior and exterior surface area of the property. 
   * We hypothesize that houses with a lot of space have higher prices.
@@ -127,9 +125,16 @@ In this page, we will provide a quick summary of
 * 2. The ages of a house and its sales price might be related. Specifically, recently built houses are likely to have modern facilities and thus higher sales prices.
   * We noted that modern houses have higher prices(**Edit later**).
 
-### Page 5: Predict price
+### Page 4: Predict price
 
 * The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+* This page displays the 4 houses' attributes and their respective predicted sale price. 
+* It displays a message informing the summed predicted price for all 4 inherited houses. 
+* Interactive input widgets that allow a user to provide real-time house data to predict the sale price.
+
+### Page 5: ML Pipeline
+
+* A technical page displaying your model performance. If you deployed an ML pipeline, you have to display your pipeline steps.
 
 
 ## 7. Unfixed Bugs
