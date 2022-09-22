@@ -47,6 +47,31 @@ Although your friend has an excellent understanding of property prices in her ow
 * 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
 * 2 - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
+In order to address the business requirements, we have the following epics and user stories. Each user story is further broken down to manageable stasks, and the agile process was used to implement each task. 
+
+### Epics
+
+* Information gathering and data collection.
+* Data visualization, cleaning, and preparation.
+* Model training, optimization and validation.
+* Dashboard planning, designing, and development.
+* Dashboard deployment and release.
+
+### User Stories
+
+* **US1:** As a client, I want to know which attributes of a house are most correlated with its sale price so that I can set the right price for each house.
+* **US2:** As a client, I want to have reliable prediction of the sale price of houses I have inherritted so that I can sell them at the maximum total price possible.
+* **US3:** As a technical user, I want to learn about the ML steps that were used to arrive at the sale price prediction so that I can understand the model employed.
+* **US4:** As a technical user, I want to know the model performance so that I can ensure that the predictions are reliable.
+* **US5:** As a client, I want to get a dashboard so that I can display the results of the prediction on a standalone app.
+* **US6:** As a user, I want to have interactive input widgets so that I can provide real-time house data and predict the sale price.
+* **US7:** As a user, I want to see relevant plots so that I can visualize the relationships between sale price and other features.
+* **US8:** As a user, I want to have access to the data cleaning and preparation pipeline so that I can quickly predict sale price without reinventing the wheel.
+* **US9:** As a user, I want to know the source and content of the data used in training the model so that I can be confident about the quality of the trained model.
+* **US10:** As a user, I want to know the project hypotheses and how they were validated so that I understand 
+### Tasks
+
+
 
 ## 3. Hypotheses and how to validate?
 * Size matters. Variables that are associated with the size of the house are positively correlated to sale price.
