@@ -257,21 +257,21 @@ This page presents:
 
 * Here is a list of the libraries I used in the project. The version number of each library can be found in the [requirements file](https://github.com/Amareteklay/heritage-housing-issues/blob/main/requirements.txt) of this project.
 
-* Numpy: 
+* Numpy was used to generate arrays of random numbers such as the mask of zeros used in the correlation heatmaps.
 
 * Pandas: to convert CSV data to DataFrame and make data management and manipulation with the help of builtin functionalities easier. 
 
 * Scikit-learn: was used to train and evaluate the ML model that was then used to predict sale price. The training involves cross validation and hyperparameter optimization in an effort to identify the most appropriate model and specify the optimal parameters that enhance model performance.
 
-* Matplot-lib: 
+* Matplot-lib was used to generate different types of plots.
 
-* Seaborn: 
+* Seaborn was used to create statistical graphs such as heatmaps. It augments the functionalities of matplot-lib.
 
 * Jupyter: an interactive environment to create the notebooks where I collect data, clean the data, conduct correlation study, do feature engineering, train and evaluate ML model. 
 
 * StreamLit: to create a dashboard with important information organized in separate pages and an interactive UI for predicting sale price of a house.
 
-* pandas-profiling
+* pandas-profiling: 
 * plotly
 * ppscore
 * feature-engine

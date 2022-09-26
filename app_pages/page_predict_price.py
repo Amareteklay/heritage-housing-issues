@@ -26,11 +26,16 @@ def page_predict_price_body():
 	st.write(f"Predicting sales price of inheritted houses.")
 
 	X_inheritted = load_heritage_data()
-	st.write(X_inheritted.filter(house_features).head())
 	summed_price = 0
+	predicted_sale_price = []
 	for i in range(X_inheritted.shape[0]):
 		pprice = predict_inheritted_house_price(X_inheritted.iloc[[i,]], house_features, regression_pipe)
+		predicted_sale_price.append(round(pprice))
 		summed_price = summed_price + pprice
+		summed_price = round(summed_price)
+	X_inheritted = X_inheritted.filter(house_features)
+	X_inheritted['psp'] = predicted_sale_price
+	st.write(X_inheritted.head())
 	st.write(f"* Summed price: **{summed_price}** \n"
 	         f"* Features used: **{X_inheritted.columns}**."
 			 )

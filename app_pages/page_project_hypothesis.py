@@ -6,8 +6,10 @@ def page_project_hypothesis_body():
 
     # conclusions taken from "02 - Churned Customer Study" notebook 
     st.success(
-        f"* One of the most important attributes that determine the sales price of a house is the property size. This can include the interior and exterior surface area of the property. We hypothesize that houses with a lot of space have higher prices.\n\n"
-        
-        f"* The ages of a house and its sales price might be related. Specifically, recently built houses are likely to have modern facilities and thus higher sales prices."
-    )
+       f"* Size matters. Variables that are associated with the size of the house are positively correlated to sale price. We will examine correlations between attributes about the size of the house and the sale price.\n"
+       
+       f"* Ratings of the quality and condition of the house reflect its value and thus higher ratings indicate higher sale price. We will use the correlation between variables about the different ratings of the house and the sale price to validate this hypothesis.\n"
+       
+       f"* Age of the house is expected to have significant influence on the sale price of the house. We study when the house was built and how expensive it is to test this hypothesis.\n"
+       )
         
