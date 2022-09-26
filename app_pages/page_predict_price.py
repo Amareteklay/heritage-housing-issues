@@ -14,16 +14,15 @@ def page_predict_price_body():
 					)
 
 
-	st.write("### House Price Predictor")
+	st.write("### Predicting sales price of inherited houses")
 	st.info(
        f"* The client is interested in predicting the house sale prices from her 4 inherited houses,"
        f" and any other house in Ames, Iowa."
 	)
-	st.write("---")
 
 	# Predict sales prices of inheritted houses
 
-	st.write(f"##### Predicting sales price of inherited houses.")
+	st.write(f"###### Predicted sales price of inherited houses")
 
 	X_inheritted = load_heritage_data()
 	summed_price = 0
@@ -39,12 +38,15 @@ def page_predict_price_body():
 	st.write(f"* Summed price: **{summed_price}** \n"
 	         f"* Features used: **{X_inheritted.columns.to_list()}**."
 			 )
-
-
+	
+	st.write("---")
 	# Generate Live Data
 	# check_variables_for_UI(tenure_features, churn_features, cluster_features)
+	st.write("### House Price Predictor Interface")
+	
 	st.write("#### Do you want to predict sale price of another house?")
 	st.write("Provide the correct values of the following attributes and click on the 'Predict Sale Price' button.")
+	
 	X_live = DrawInputsWidgets()
 
 

@@ -150,7 +150,7 @@ In order to address the business requirements, we have the following epics and u
 
 	* The ML model is considered a failure if:
 
-		* for a given house, the model's predictions are off more than 25% of the time. For example, if the model predicts the sale price of a house to be XXX but the actual price is YYY.
+		* for a given house, the model's predictions are off more than 25% of the time.
 
 * The output is defined as a continuous value for sale price in USD. It is assumed that this model will predict sale price of a house whose relevant attributes are known. Inherited houses have known attributes, and their sale prices are predicted by the model. For live prediction of sale price of a house other than the four inherited houses, the user can enter the required values for the relevant features and get the prediction in real-time.
 
@@ -271,13 +271,10 @@ This page presents:
 
 * StreamLit: to create a dashboard with important information organized in separate pages and an interactive UI for predicting sale price of a house.
 
-* pandas-profiling: 
-* plotly
-* ppscore
-* feature-engine
-* imbalanced-learn
-* xgboost
-* yellowbrick
+* pandas-profiling was used to inspect each variable in the dataset to better understand the data and identify potential need for data cleaning.
+* ppscore was used to calculate the relationships between different pairs of variables in the dataset irrespective of the data type of each variable.
+* feature-engine was used to conduct feature engineering to prepare the dataset for the machine learning process. For example, I used feature-engine to encode and transform variables.
+
 
 ## **10. Credits**
  

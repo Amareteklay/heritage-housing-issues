@@ -78,19 +78,19 @@ def house_price_per_variable(df_eda):
 
 
 def plot_scatter(df, col, target_var):
-    fig, axes = plt.subplots(figsize=(12, 5))
+    fig, axes = plt.subplots(figsize=(12, 6))
     sns.scatterplot(data=df, x=col, y=target_var)
     plt.title(f"{col}", fontsize=20)        
     st.pyplot(fig) # st.pyplot() renders image, in notebook is plt.show()
 
 def plot_line(df, col, target_var):
-    fig, axes = plt.subplots(figsize=(12, 5))
+    fig, axes = plt.subplots(figsize=(12, 6))
     sns.lineplot(data=df, x=col, y=target_var)
     plt.title(f"{col}", fontsize=20)        
     st.pyplot(fig) # st.pyplot() renders image, in notebook is plt.show()
 
 def plot_box(df, col, target_var):
-    fig, axes = plt.subplots(figsize=(12, 5))
+    fig, axes = plt.subplots(figsize=(12, 6))
     sns.boxplot(data=df, x=col, y=target_var) 
     plt.title(f"{col}", fontsize=20)
     st.pyplot(fig) # st.pyplot() renders image, in notebook is plt.show()
