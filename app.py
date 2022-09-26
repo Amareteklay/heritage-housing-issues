@@ -7,7 +7,7 @@ from app_pages.page_predict_price import page_predict_price_body
 from app_pages.page_ML_predict_price import page_ml_predict_price_body
 
 
-app = MultiPage(app_name= "Housing Prices") # Create an instance of the app 
+app = MultiPage(app_name= "HouPP: Housing Price Predictor") # Create an instance of the app 
 
 
 # load pages scripts

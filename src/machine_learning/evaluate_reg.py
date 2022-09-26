@@ -24,7 +24,7 @@ def regression_evaluation_plots(X_train, y_train, X_test, y_test,pipeline, alpha
   pred_train = pipeline.predict(X_train)
   pred_test = pipeline.predict(X_test)
 
-  fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(12,6))
+  fig, axes = plt.subplots(nrows=2, ncols=1, figsize=(6,12))
   sns.scatterplot(x=y_train['SalePrice'], y=pred_train, alpha=alpha_scatter, ax=axes[0])
   sns.lineplot(x=y_train['SalePrice'] , y=y_train['SalePrice'], color='red', ax=axes[0])
   axes[0].set_xlabel("Actual")

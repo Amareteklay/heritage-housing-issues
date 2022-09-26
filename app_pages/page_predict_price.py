@@ -34,7 +34,7 @@ def page_predict_price_body():
 		summed_price = summed_price + pprice
 		summed_price = round(summed_price)
 	X_inheritted = X_inheritted.filter(house_features)
-	X_inheritted['psp'] = predicted_sale_price
+	X_inheritted['PredictedSalePrice'] = predicted_sale_price
 	st.write(X_inheritted.head())
 	st.write(f"* Summed price: **{summed_price}** \n"
 	         f"* Features used: **{X_inheritted.columns.to_list()}**."

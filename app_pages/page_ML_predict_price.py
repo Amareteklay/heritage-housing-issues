@@ -47,5 +47,5 @@ def page_ml_predict_price_body():
                         X_test=X_test, y_test=y_test,
                         pipeline=price_pipe) 
 
-
+    st.write("### Regression Performance Plots")
     regression_evaluation_plots(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=price_pipe)  
