@@ -40,9 +40,7 @@ def page_predict_price_body():
 	         f"* Features used: **{X_inheritted.columns.to_list()}**."
 			 )
 
-		
 
-	
 	# Generate Live Data
 	# check_variables_for_UI(tenure_features, churn_features, cluster_features)
 	st.write("#### Do you want to predict sale price of another house?")
