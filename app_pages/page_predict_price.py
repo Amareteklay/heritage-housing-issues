@@ -23,7 +23,7 @@ def page_predict_price_body():
 
 	# Predict sales prices of inheritted houses
 
-	st.write(f"Predicting sales price of inheritted houses.")
+	st.write(f"##### Predicting sales price of inherited houses.")
 
 	X_inheritted = load_heritage_data()
 	summed_price = 0
@@ -37,7 +37,7 @@ def page_predict_price_body():
 	X_inheritted['psp'] = predicted_sale_price
 	st.write(X_inheritted.head())
 	st.write(f"* Summed price: **{summed_price}** \n"
-	         f"* Features used: **{X_inheritted.columns}**."
+	         f"* Features used: **{X_inheritted.columns.to_list()}**."
 			 )
 
 		
@@ -45,6 +45,8 @@ def page_predict_price_body():
 	
 	# Generate Live Data
 	# check_variables_for_UI(tenure_features, churn_features, cluster_features)
+	st.write("#### Do you want to predict sale price of another house?")
+	st.write("Provide the correct values of the following attributes and click on the 'Predict Sale Price' button.")
 	X_live = DrawInputsWidgets()
 
 
@@ -83,7 +85,7 @@ def DrawInputsWidgets():
 	# from here on we draw the widget based on the variable type (numerical or categorical)
 	# and set initial values
 	with col1:
-		feature = "GarageArea"
+		feature = "2ndFlrSF"
 		st_widget = st.selectbox(
 			label= feature,
 			options= df[feature].unique()
@@ -92,20 +94,19 @@ def DrawInputsWidgets():
 
 
 	with col2:
-		feature = "GrLivArea"
+		feature = "GarageArea"
 		st_widget = st.selectbox(
 			label= feature,
 			options= df[feature].unique()
 			)
 	X_live[feature] = st_widget
 
+
 	with col3:
-		feature = "OverallQual"
-		st_widget = st.number_input(
+		feature = "KitchenQual"
+		st_widget = st.selectbox(
 			label= feature,
-			min_value= df[feature].min()*percentageMin,
-			max_value= df[feature].max()*percentageMax,
-			value= df[feature].median()
+			options= df[feature].unique()
 			)
 	X_live[feature] = st_widget
 
@@ -119,6 +120,15 @@ def DrawInputsWidgets():
 
 	with col5:
 		feature = "YearBuilt"
+		st_widget = st.selectbox(
+			label= feature,
+			options= df[feature].unique()
+			)
+	X_live[feature] = st_widget
+
+
+	with col6:
+		feature = "YearRemodAdd"
 		st_widget = st.selectbox(
 			label= feature,
 			options= df[feature].unique()

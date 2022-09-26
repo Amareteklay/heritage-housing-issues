@@ -21,7 +21,9 @@ def page_ml_predict_price_body():
     st.write("### ML Pipeline: Predict House Price")    
     # display pipeline training summary conclusions
     st.info(
-        f"* The house prices predicted by the ML model are... "
+        f"* The pipeline was tuned aiming at least 0.75 accuracy for the sales price of a property with a given set of attributes.\n"
+
+        f"* The pipeline performance on the train and test set is 0.99 and 0.79 respectively.\n"
        )
     st.write("---")
 

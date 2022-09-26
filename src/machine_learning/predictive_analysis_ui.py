@@ -12,8 +12,8 @@ def predict_price(X_live, house_features, price_pipeline):
 	# create a logic to display the results
 	
 	statement = (
-			f"* The price of a house with the given attribute values is: **{price_prediction[0]}**."
-			f"* The features used are: **{X_live_price}**."
+			f"* The price of a house with the given attribute values is: **{round(price_prediction[0])}**.\n\n"
+			f"* The features used are: **{X_live_price.columns.to_list()}**."
 			)
 	
 	st.write(statement)
