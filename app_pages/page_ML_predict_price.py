@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 from src.data_management import load_housing_data, load_pkl_file
-from src.machine_learning.evaluate_reg import regression_performance
+from src.machine_learning.evaluate_reg import regression_performance, regression_evaluation_plots
 
 
 def page_ml_predict_price_body():
@@ -45,4 +45,7 @@ def page_ml_predict_price_body():
     st.write("### Pipeline Performance")
     regression_performance(X_train=X_train, y_train=y_train,
                         X_test=X_test, y_test=y_test,
-                        pipeline=price_pipe)  
+                        pipeline=price_pipe) 
+
+
+    regression_evaluation_plots(X_train=X_train, y_train=y_train, X_test=X_test, y_test=y_test, pipeline=price_pipe)  
