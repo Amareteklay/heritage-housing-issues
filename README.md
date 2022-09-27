@@ -78,7 +78,7 @@ In order to address the business requirements, we have the following epics and u
 
 ### User Stories
 
-* **US1:** As a client, I want to know which attributes of a house are most correlated with its sale price so that I can base my prediction on the the right set of features.
+* **US1:** As a client, I want to know which attributes of a house are most correlated with its sale price so that I can base my prediction on the the right set of features.(Business Requirement Covered: 1)
 
 * **US2:** As a client, I want to have reliable prediction of the sale price of houses I have inherited so that I can sell them at the maximum total price possible.
 
@@ -227,6 +227,11 @@ This page presents:
 * feature importance (both a list and a plot)
 
 * pipeline performance of the regression model
+
+<details>
+<summary>Feature Importance</summary>
+<img src="docs/features_importance.png">
+</details>
 
 ## **7. Unfixed Bugs**
 

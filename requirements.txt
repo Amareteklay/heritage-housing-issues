@@ -130,7 +130,7 @@ snowballstemmer==2.2.0
 stack-data==0.3.0
 statsmodels==0.13.2
 stevedore==3.5.0
-streamlit==1.11.1
+streamlit==0.85.0
 tangled-up-in-unicode==0.2.0
 terminado==0.13.2
 testpath==0.6.0
