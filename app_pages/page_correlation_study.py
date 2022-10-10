@@ -1,17 +1,17 @@
 import streamlit as st
 from src.data_management import load_housing_data
-
-
 import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set_style("whitegrid")
-
 from feature_engine.discretisation import ArbitraryDiscretiser
 import numpy as np
 import plotly.express as px
 
 def page_correlation_study_body():
-
+    """
+    Display correlated features and a checkbox to show the show
+    house price per variable.
+    """
     df = load_housing_data()
 
     vars_to_study = ['1stFlrSF', 'GarageArea', 'GrLivArea', 'KitchenQual', 'MasVnrArea', 'OpenPorchSF', 'OverallQual', 'TotalBsmtSF', 'YearBuilt', 'YearRemodAdd']
@@ -41,7 +41,7 @@ def page_correlation_study_body():
     )
 
 
-    # Text based on "03 - House Prices" notebook - "Conclusions and Next steps" section
+    # Text based on "03 - Correlation_Study" notebook - "Conclusions and Next steps" section
     st.info(
         f"We make the following observations from both the correlation analysis and the plots.\n"
         f"* Higher values of 1stFlrSF, garage area, GrLivArea, MasVnrArea and TotalBsmtSF are associated with higher sale price.\n"
@@ -59,6 +59,10 @@ def page_correlation_study_body():
 
 
 def house_price_per_variable(df_eda):
+    """
+    Generate box plot, line plot or scatter plot of SalePrice and
+    the house features 
+    """
     vars_to_study = ['1stFlrSF', 'GarageArea', 'GrLivArea', 'KitchenQual', 'MasVnrArea', 'OpenPorchSF', 'OverallQual', 'TotalBsmtSF', 'YearBuilt', 'YearRemodAdd']
     time = ['YearBuilt', 'YearRemodAdd']
     target_var = 'SalePrice'
@@ -78,18 +82,27 @@ def house_price_per_variable(df_eda):
 
 
 def plot_scatter(df, col, target_var):
+    """
+    Generate scatter plot
+    """
     fig, axes = plt.subplots(figsize=(12, 6))
     sns.scatterplot(data=df, x=col, y=target_var)
     plt.title(f"{col}", fontsize=20)        
     st.pyplot(fig) # st.pyplot() renders image, in notebook is plt.show()
 
 def plot_line(df, col, target_var):
+    """
+    Generate line plot
+    """
     fig, axes = plt.subplots(figsize=(12, 6))
     sns.lineplot(data=df, x=col, y=target_var)
     plt.title(f"{col}", fontsize=20)        
     st.pyplot(fig) # st.pyplot() renders image, in notebook is plt.show()
 
 def plot_box(df, col, target_var):
+    """
+    Generate box plot
+    """
     fig, axes = plt.subplots(figsize=(12, 6))
     sns.boxplot(data=df, x=col, y=target_var) 
     plt.title(f"{col}", fontsize=20)
