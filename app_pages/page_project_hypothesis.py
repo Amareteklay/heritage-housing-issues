@@ -4,7 +4,7 @@ def page_project_hypothesis_body():
 
     st.write("### Project Hypotheses and Validation")
 
-    # conclusions taken from "02 - Churned Customer Study" notebook 
+    # conclusions taken from "03 - Correlation_Study" notebook 
     st.success(
        f"* Size matters. Variables that are associated with the size of the house are positively correlated to sale price. We will examine correlations between attributes about the size of the house and the sale price.\n\n"
        

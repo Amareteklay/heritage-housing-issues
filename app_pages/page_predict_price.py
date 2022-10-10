@@ -5,7 +5,7 @@ from src.machine_learning.predictive_analysis_ui import predict_price, predict_i
 
 def page_predict_price_body():
 	
-	# load predict tenure files
+	# load predict price files
 	version = 'v1'
 	regression_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")
 	house_features = (pd.read_csv(f"outputs/ml_pipeline/predict_price/{version}/X_train.csv")
@@ -20,7 +20,7 @@ def page_predict_price_body():
        f" and any other house in Ames, Iowa."
 	)
 
-	# Predict sales prices of inheritted houses
+	# Predict sales prices of inherited houses
 
 	st.write(f"###### Predicted sales price of inherited houses")
 
@@ -41,7 +41,7 @@ def page_predict_price_body():
 	
 	st.write("---")
 	# Generate Live Data
-	# check_variables_for_UI(tenure_features, churn_features, cluster_features)
+	# check_variables_for_UI(price_features)
 	st.write("### House Price Predictor Interface")
 	
 	st.write("#### Do you want to predict sale price of another house?")
