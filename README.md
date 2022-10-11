@@ -199,8 +199,8 @@ This page shows a quick summary of
 * the business requirements
 
 <details>
-<summary>Page 1: Quick project summary</summary>
-<img src="docs/plots/heatmap_corr_pearson.png">
+<summary>Page 1: Quick project summary (Screenshot)</summary>
+<img src="docs/screenshots/page -1.png">
 </details>
 
 ### **Page 2: House prices Correlation Study**
@@ -255,8 +255,8 @@ After identifying the features most correlated with the target variable, we anal
 </details>
 
 <details>
-<summary>Page 2: House prices Correlation Study</summary>
-<img src="docs/plots/heatmap_corr_pearson.png">
+<summary>Page 2: House prices Correlation Study (Screenshot)</summary>
+<img src="docs/screenshots/page -2.png">
 </details>
 
 ### **Page 3: Project hypotheses and validation**
@@ -274,8 +274,8 @@ After identifying the features most correlated with the target variable, we anal
    * We study when the house was built and how expensive it is to test this hypothesis.
 
 <details>
-<summary>Page 3: Project hypotheses and validation</summary>
-<img src="docs/plots/heatmap_corr_pearson.png">
+<summary>Page 3: Project hypotheses and validation (Screenshot)</summary>
+<img src="docs/screenshots/page -3.png">
 </details>
 
 ### **Page 4: Predict House price**
@@ -294,8 +294,8 @@ After identifying the features most correlated with the target variable, we anal
 
 
 <details>
-<summary>Page 4: Predict House price</summary>
-<img src="docs/plots/heatmap_corr_pearson.png">
+<summary>Page 4: Predict House price (Screenshot)</summary>
+<img src="docs/screenshots/page -4.png">
 </details>
 
 ### **Page 5: ML: House Price Predictor**
@@ -316,8 +316,10 @@ This page presents:
 </details>
 
 <details>
-<summary>Page 5: ML: House Price Predictor</summary>
-<img src="docs/plots/heatmap_corr_pearson.png">
+<summary>Page 5: ML: House Price Predictor (Screenshot)</summary>
+<img src="docs/screenshots/page -5-1.png">
+<img src="docs/screenshots/page -5-2.png">
+<img src="docs/screenshots/page -5-3.png">
 </details>
 
 ## **7. Unfixed Bugs**
