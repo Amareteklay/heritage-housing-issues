@@ -161,30 +161,33 @@ In order to address the business requirements, we have the following epics and u
 ### **Predict Sale Price**
 #### **Regression Model**
 
-* We want an ML model to predict sale price of a house with several attributes. As our target variable is a discrete number, we consider a **regression model**, which is supervised and uni-dimensional.
+* In order to meet the second business requirements, we want to train a Machine Learning model.
 
-* Our ideal outcome is to provide our client with reliable insight into house attributes that maximize its sale price.
+* *The aim behind the Machine Learning model* is to enable our client to predict sale price of four inherited houses as well as any house with similar attributes. 
 
-* The model success metrics are
+* *The learning method* for the Machine Learning model is a **regression model**, because our target variable is a discrete number. It will be a supervised and uni-dimensional ML task. 
 
+* *The ideal outcome* provide our client with reliable insight into house attributes that *help maximize its sale price*.
+
+* *The model success/failure metrics* are
 	* At least 0.75 for R2 score, on train and test set
-
 	* The ML model is considered a failure if:
-
 		* for a given house, the model's predictions are off more than 25% of the time.
 
-* The output is defined as a continuous value for sale price in USD. It is assumed that this model will predict sale price of a house whose relevant attributes are known. Inherited houses have known attributes, and their sale prices are predicted by the model. For live prediction of sale price of a house other than the four inherited houses, the user can enter the required values for the relevant features and get the prediction in real-time.
+* The output is defined as a continuous value for sale price in USD. It is assumed that this model will predict sale price of a house whose relevant attributes are known. 
+   * *The inherited houses* that our client has provided us *have known attributes*, and we want the model to predict the sale price of each house and the summed sale price for the four inherited houses. 
+   * For *live prediction* of sale price of a house other than the four inherited houses, we want to enable the user to enter the required values for the relevant features and get the *predicted sale price* in real-time. *The model output* in the live prediction will not include summed sale price, because the user will enter data for one house at a time.
+   * Both the summed sale price and the live prediction *are relevant for our client*, who already has four inherited houses but may also want to predict other similar houses from Ames, Iowa.    
 
-* Heuristics: ?? .
+* Heuristics: Our client could have used her understanding of property prices in her own state and residential area, but she fears that basing her estimates for property worth on her current knowledge might lead to inaccurate appraisals. So she requested us to help her maximize sale price. We rely on a Machine Learning model and draw on regression algorithms, instead of using inaccurate heuristics.
 
-* The training data to fit the model come from a public dataset in Ames, Iowa. This dataset contains about 1.5 thousand house price records.
+* The training data we use to develop out house price predictor (HouPP) model come from a public dataset in Ames, Iowa. This dataset contains about 1.5 thousand property price records and 22 features.
 
-	* Train data: drop variables EnclosedPorch and WooddeckSF because each has more than 75% missing values. 
+	* Train data: drop variables 'EnclosedPorch' and 'WooddeckSF' because each has more than 75% missing values. 
 
-  * Target: sale price 
+  * Target variable: SalePrice 
 
-  * features: all other variables, except 
-
+  * Features: all remaining variables.
 
 ## **6. Dashboard Design**
 
