@@ -233,7 +233,7 @@ This page shows
 
 SalePrice is our target variable, and its distribution is studied using histogram. 
 
-![Histogram of SalePrice]("docs/hist_plot_SalePrice.png")
+![Histogram of SalePrice](docs/hist_plot_SalePrice.png)
 
 After identifying the features most correlated with the target variable, we analyse the relationships between saleprice and each feature. 
 - For categorical features, we use box plot
