@@ -1,7 +1,7 @@
 # **HouPP: Housing Price Predictor**
 
 HouPP (Housing Price Predictor) is a Machine Learning project that helps users to predict the sales prices of houses taking the houses' attributes as inputs.
-![Sample Page](docs/page%20-1.png)
+![Sample Page](docs/screenshots/page%20-1.png)
 The dashboard for [HouPP is hosted on Heroku](https://houpp.herokuapp.com/).
 
 ## Table of Contents
@@ -200,7 +200,7 @@ This page shows a quick summary of
 
 <details>
 <summary>Page 1: Quick project summary</summary>
-<img src="docs/heatmap_corr_pearson.png">
+<img src="docs/plots/heatmap_corr_pearson.png">
 </details>
 
 ### **Page 2: House prices Correlation Study**
@@ -216,24 +216,24 @@ This page shows
 
 <details>
 <summary>Pearson Correlation Heatmap</summary>
-<img src="docs/heatmap_corr_pearson.png">
+<img src="docs/plots/heatmap_corr_pearson.png">
 </details>
 
 <details>
 <summary>Spearman Correlation Heatmap</summary>
-<img src="docs/heatmap_corr_spearman.png">
+<img src="docs/plots/heatmap_corr_spearman.png">
 </details>
 
 <details>
 <summary> PPS Heatmap</summary>
-<img src="docs/heatmap_pps.png">
+<img src="docs/plots/heatmap_pps.png">
 </details>
 
 #### Target Analysis
 
 SalePrice is our target variable, and its distribution is studied using histogram. 
 
-![Histogram of SalePrice](docs/hist_plot_SalePrice.png)
+![Histogram of SalePrice](docs/plots/hist_plot_SalePrice.png)
 
 After identifying the features most correlated with the target variable, we analyse the relationships between saleprice and each feature. 
 - For categorical features, we use box plot
@@ -242,21 +242,21 @@ After identifying the features most correlated with the target variable, we anal
 
 <details>
 <summary>Click here to toggle plots</summary>
-<img src="docs/scatter_plot_price_by_1stFlrSF.png">
-<img src="docs/scatter_plot_price_by_GarageArea.png">
-<img src="docs/scatter_plot_price_by_GrLivArea.png">
-<img src="docs/box_plot_price_by_KichenQual.png">
-<img src="docs/scatter_plot_price_by_MasVnrArea.png">
-<img src="docs/scatter_plot_price_by_OpenPorchSF.png">
-<img src="docs/box_plot_price_by_OverallQual.png">
-<img src="docs/scatter_plot_price_by_TotalBsmtSF.png">
-<img src="docs/line_plot_price_by_YearBuilt.png">
-<img src="docs/line_plot_price_by_YearRemodAdd.png">
+<img src="docs/plots/scatter_plot_price_by_1stFlrSF.png">
+<img src="docs/plots/scatter_plot_price_by_GarageArea.png">
+<img src="docs/plots/scatter_plot_price_by_GrLivArea.png">
+<img src="docs/plots/box_plot_price_by_KichenQual.png">
+<img src="docs/plots/scatter_plot_price_by_MasVnrArea.png">
+<img src="docs/plots/scatter_plot_price_by_OpenPorchSF.png">
+<img src="docs/plots/box_plot_price_by_OverallQual.png">
+<img src="docs/plots/scatter_plot_price_by_TotalBsmtSF.png">
+<img src="docs/plots/line_plot_price_by_YearBuilt.png">
+<img src="docs/plots/line_plot_price_by_YearRemodAdd.png">
 </details>
 
 <details>
 <summary>Page 2: House prices Correlation Study</summary>
-<img src="docs/heatmap_corr_pearson.png">
+<img src="docs/plots/heatmap_corr_pearson.png">
 </details>
 
 ### **Page 3: Project hypotheses and validation**
@@ -275,7 +275,7 @@ After identifying the features most correlated with the target variable, we anal
 
 <details>
 <summary>Page 3: Project hypotheses and validation</summary>
-<img src="docs/heatmap_corr_pearson.png">
+<img src="docs/plots/heatmap_corr_pearson.png">
 </details>
 
 ### **Page 4: Predict House price**
@@ -295,7 +295,7 @@ After identifying the features most correlated with the target variable, we anal
 
 <details>
 <summary>Page 4: Predict House price</summary>
-<img src="docs/heatmap_corr_pearson.png">
+<img src="docs/plots/heatmap_corr_pearson.png">
 </details>
 
 ### **Page 5: ML: House Price Predictor**
@@ -312,12 +312,12 @@ This page presents:
 
 <details>
 <summary>Feature Importance</summary>
-<img src="docs/features_importance.png">
+<img src="docs/plots/features_importance.png">
 </details>
 
 <details>
 <summary>Page 5: ML: House Price Predictor</summary>
-<img src="docs/heatmap_corr_pearson.png">
+<img src="docs/plots/heatmap_corr_pearson.png">
 </details>
 
 ## **7. Unfixed Bugs**
