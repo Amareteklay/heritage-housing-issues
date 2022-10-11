@@ -229,6 +229,26 @@ This page shows
 <img src="docs/heatmap_pps.png">
 </details>
 
+#### Target Analysis
+
+After identifying the features most correlated with the target variable, we analyse the relationships between saleprice and each feature. 
+- For categorical features, we use box plot
+- For features with continuous values, we use catter plot
+- For time variables, we use line plot
+
+<details>
+<summary>Click here to expand all plots</summary>
+<img src="docs/scatter_plot_price_by_1stFlrSF.png">
+<img src="docs/scatter_plot_price_by_GarageArea.png">
+<img src="docs/scatter_plot_price_by_GrLivArea.png">
+<img src="docs/box_plot_price_by_KichenQual.png">
+<img src="docs/scatter_plot_price_by_MasVnrArea.png">
+<img src="docs/scatter_plot_price_by_OpenPorchSF.png">
+<img src="docs/box_plot_price_by_OverallQual.png">
+<img src="docs/scatter_plot_price_by_TotalBsmtSF.png">
+<img src="docs/line_plot_price_by_YearBuilt.png">
+<img src="docs/line_plot_price_by_YearRemodAdd.png">
+</details>
 
 <details>
 <summary>Page 2: House prices Correlation Study</summary>
