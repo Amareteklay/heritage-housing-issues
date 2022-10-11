@@ -209,6 +209,15 @@ This page shows
   * box plots of sale price and each of the categorical features
   * line graphs of sale price and each of the time variables
 
+  <details>
+<summary>Pearson Correlation Heatmap</summary>
+<img src="docs/heatmap_corr_pearson.png">
+<summary>Spearman Correlation Heatmap</summary>
+<img src="docs/heatmap_corr_spearman.png">
+<summary> PPS Heatmap</summary>
+<img src="docs/heatmap_pps.png">
+</details>
+
 ### **Page 3: Project hypotheses and validation**
 
 1. Size matters. Variables that are associated with the size of the house are positively correlated to sale price.
