@@ -198,6 +198,11 @@ This page shows a quick summary of
 
 * the business requirements
 
+<details>
+<summary>Page 1: Quick project summary</summary>
+<img src="docs/heatmap_corr_pearson.png">
+</details>
+
 ### **Page 2: House prices Correlation Study**
 
 This page shows
@@ -212,10 +217,22 @@ This page shows
   <details>
 <summary>Pearson Correlation Heatmap</summary>
 <img src="docs/heatmap_corr_pearson.png">
+</details>
+
+<details>
 <summary>Spearman Correlation Heatmap</summary>
 <img src="docs/heatmap_corr_spearman.png">
+</details>
+
+<details>
 <summary> PPS Heatmap</summary>
 <img src="docs/heatmap_pps.png">
+</details>
+
+
+<details>
+<summary>Page 2: House prices Correlation Study</summary>
+<img src="docs/heatmap_corr_pearson.png">
 </details>
 
 ### **Page 3: Project hypotheses and validation**
@@ -232,6 +249,11 @@ This page shows
 
    * We study when the house was built and how expensive it is to test this hypothesis.
 
+<details>
+<summary>Page 3: Project hypotheses and validation</summary>
+<img src="docs/heatmap_corr_pearson.png">
+</details>
+
 ### **Page 4: Predict House price**
 
 * State business requirement 2
@@ -245,6 +267,12 @@ This page shows
 * Set of interactive input widgets that allow a user to provide real-time house data to predict the sale price.
 
 * "Predict Sale Price" button that serves the new house data to our ML pipelines, and predicts the sale price of the house.
+
+
+<details>
+<summary>Page 4: Predict House price</summary>
+<img src="docs/heatmap_corr_pearson.png">
+</details>
 
 ### **Page 5: ML: House Price Predictor**
 
@@ -261,6 +289,11 @@ This page presents:
 <details>
 <summary>Feature Importance</summary>
 <img src="docs/features_importance.png">
+</details>
+
+<details>
+<summary>Page 5: ML: House Price Predictor</summary>
+<img src="docs/heatmap_corr_pearson.png">
 </details>
 
 ## **7. Unfixed Bugs**
