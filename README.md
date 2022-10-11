@@ -231,13 +231,17 @@ This page shows
 
 #### Target Analysis
 
+SalePrice is our target variable, and its distribution is studied using histogram. 
+
+![Histogram of SalePrice]("docs/hist_plot_SalePrice.png")
+
 After identifying the features most correlated with the target variable, we analyse the relationships between saleprice and each feature. 
 - For categorical features, we use box plot
 - For features with continuous values, we use catter plot
 - For time variables, we use line plot
 
 <details>
-<summary>Click here to expand all plots</summary>
+<summary>Click here to toggle plots</summary>
 <img src="docs/scatter_plot_price_by_1stFlrSF.png">
 <img src="docs/scatter_plot_price_by_GarageArea.png">
 <img src="docs/scatter_plot_price_by_GrLivArea.png">
