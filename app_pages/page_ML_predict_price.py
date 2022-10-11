@@ -6,7 +6,10 @@ from src.machine_learning.evaluate_reg import regression_performance, regression
 
 
 def page_ml_predict_price_body():
-
+    """
+    Displays ML pipeline, feature importance and ML and regression
+    performance plots 
+    """
     # load price pipeline files
     version = 'v1'
     price_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")

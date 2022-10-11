@@ -1,7 +1,9 @@
 import streamlit as st
 
 def page_summary_body():
-
+    """
+    Displays contents of the project summary page
+    """
     st.write("### Quick Project Summary")
 
     st.info(

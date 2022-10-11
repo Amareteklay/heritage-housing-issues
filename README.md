@@ -3,6 +3,26 @@
 HouPP (Housing Price Predictor) is a Machine Learning project that helps users to predict the sales prices of houses taking the houses' attributes as inputs.
 The dashboard for [HouPP is hosted on Heroku](https://houpp.herokuapp.com/).
 
+## Table of Contents
+
+1. [Dataset Content](#1-dataset-content)
+2. [Business Requirements](#2-business-requirements)
+    1. [Epics](#epics)
+    2. [User Stories](#user-stories)
+3. [Hypotheses and validation](#3-hypotheses-and-validation)
+4. [Rationale to map the business requirements to the Data Visualizations and ML tasks](#4-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
+5. [ML Business Case](#5-ml-business-case)
+6. [Dashboard Design](#6-dashboard-design)
+   - [Page 1: Quick project summary](#page-1-quick-project-summary)
+   - [Page 2: House prices Correlation Study](#page-2-house-prices-correlation-study)
+   - [Page 3: Project hypotheses and validation](#3-hypotheses-and-validation)
+   - [Page 4: Predict House price](#page-4-predict-house-price)
+   - [Page 5: ML: House Price Predictor](#page-5-ml-house-price-predictor)
+7. [Unfixed Bugs](#7-unfixed-bugs)
+8. [Deployment](#8-deployment)
+9. [Main Data Analysis and Machine Learning Libraries](#9-main-data-analysis-and-machine-learning-libraries)
+10. [Credits](#10-credits)
+
 ## **1. Dataset Content**
 
 * The dataset for this project is sourced from [Kaggle](https://www.kaggle.com/codeinstitute/housing-prices-data). We created then a fictitious user story where predictive analytics can be applied in a real project in the workplace. 
@@ -58,9 +78,9 @@ Our client found a public dataset with house prices for Ames, Iowa, and has prov
 
 We have agreed with our client on the following business requirements.
 
-* 1 - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
+* 1 - (BR1) The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
 
-* 2 - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
+* 2 - (BR2) The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
 In order to address the business requirements, we have the following epics and user stories. Each user story was then broken down to manageable stasks, and the agile process was used to implement each task. 
 
@@ -78,19 +98,19 @@ In order to address the business requirements, we have the following epics and u
 
 ### User Stories
 
-* **US1:** As a client, I want to know which attributes of a house are most correlated with its sale price so that I can base my prediction on the the right set of features.(Business Requirement Covered: 1)
+* **US1:** As a client, I want to know which attributes of a house are most correlated with its sale price so that I can base my prediction on the the right set of features.(Business Requirement Covered: BR1)
 
-* **US2:** As a client, I want to have reliable prediction of the sale price of houses I have inherited so that I can sell them at the maximum total price possible.
+* **US2:** As a client, I want to have reliable prediction of the sale price of houses I have inherited so that I can sell them at the maximum total price possible. (Business Requirement Covered: BR2)
 
-* **US3:** As a technical user, I want to learn about the ML steps that were used to arrive at the sale price prediction so that I can understand the model employed.
+* **US3:** As a technical user, I want to learn about the ML steps that were used to arrive at the sale price prediction so that I can understand the model employed.(Business Requirement Covered: BR2)
 
-* **US4:** As a technical user, I want to know the model performance so that I can ensure that the predictions are reliable.
+* **US4:** As a technical user, I want to know the model performance so that I can ensure that the predictions are reliable. (Business Requirement Covered: BR2)
 
 * **US5:** As a client, I want to get a dashboard so that I can display the results of the prediction on a standalone app.
 
-* **US6:** As a user, I want to have interactive input widgets so that I can provide real-time house data and predict the sale price.
+* **US6:** As a user, I want to have interactive input widgets so that I can provide real-time house data and predict the sale price. (Business Requirement Covered: BR2)
 
-* **US7:** As a user, I want to see relevant plots so that I can visualize the relationships between sale price and other features.
+* **US7:** As a user, I want to see relevant plots so that I can visualize the relationships between sale price and other features. (Business Requirement Covered: BR1)
 
 * **US8:** As a user, I want to have access to the data cleaning and preparation pipeline so that I can quickly predict sale price without reinventing the wheel.
 
