@@ -8,7 +8,6 @@ The dashboard for [HouPP is hosted on Heroku](https://houpp.herokuapp.com/).
 
 1. [Dataset Content](#1-dataset-content)
 2. [Business Requirements](#2-business-requirements)
-    1. 
     - [Epics](#epics)
     - [User Stories](#user-stories)
 3. [Hypotheses and validation](#3-hypotheses-and-validation)
@@ -100,19 +99,19 @@ In order to address the business requirements, we have the following epics and u
 
 ### User Stories
 
-* **US1:** As a client, I want to know which attributes of a house are most correlated with its sale price so that I can base my prediction on the the right set of features.(Business Requirement Covered: BR1)
+* **US1:** As a client, I want to know which attributes of a house are most correlated with its sale price so that I can base my prediction on the the right set of features.(*Business Requirement Covered: BR1*)
 
-* **US2:** As a client, I want to have reliable prediction of the sale price of houses I have inherited so that I can sell them at the maximum total price possible. (Business Requirement Covered: BR2)
+* **US2:** As a client, I want to have reliable prediction of the sale price of houses I have inherited so that I can sell them at the maximum total price possible. (*Business Requirement Covered: BR2*)
 
-* **US3:** As a technical user, I want to learn about the ML steps that were used to arrive at the sale price prediction so that I can understand the model employed.(Business Requirement Covered: BR2)
+* **US3:** As a technical user, I want to learn about the ML steps that were used to arrive at the sale price prediction so that I can understand the model employed.(*Business Requirement Covered: BR2*)
 
-* **US4:** As a technical user, I want to know the model performance so that I can ensure that the predictions are reliable. (Business Requirement Covered: BR2)
+* **US4:** As a technical user, I want to know the model performance so that I can ensure that the predictions are reliable. (*Business Requirement Covered: BR2*)
 
 * **US5:** As a client, I want to get a dashboard so that I can display the results of the prediction on a standalone app.
 
-* **US6:** As a user, I want to have interactive input widgets so that I can provide real-time house data and predict the sale price. (Business Requirement Covered: BR2)
+* **US6:** As a user, I want to have interactive input widgets so that I can provide real-time house data and predict the sale price. (*Business Requirement Covered: BR2*)
 
-* **US7:** As a user, I want to see relevant plots so that I can visualize the relationships between sale price and other features. (Business Requirement Covered: BR1)
+* **US7:** As a user, I want to see relevant plots so that I can visualize the relationships between sale price and other features. (*Business Requirement Covered: BR1*)
 
 * **US8:** As a user, I want to have access to the data cleaning and preparation pipeline so that I can quickly predict sale price without reinventing the wheel.
 
