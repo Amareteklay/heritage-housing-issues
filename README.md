@@ -214,7 +214,7 @@ This page shows
   * box plots of sale price and each of the categorical features
   * line graphs of sale price and each of the time variables
 
-  <details>
+<details>
 <summary>Pearson Correlation Heatmap</summary>
 <img src="docs/heatmap_corr_pearson.png">
 </details>
