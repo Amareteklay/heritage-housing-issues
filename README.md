@@ -1,14 +1,16 @@
 # **HouPP: Housing Price Predictor**
 
 HouPP (Housing Price Predictor) is a Machine Learning project that helps users to predict the sales prices of houses taking the houses' attributes as inputs.
+![Sample Page](docs/page%20-1.png)
 The dashboard for [HouPP is hosted on Heroku](https://houpp.herokuapp.com/).
 
 ## Table of Contents
 
 1. [Dataset Content](#1-dataset-content)
 2. [Business Requirements](#2-business-requirements)
-    1. [Epics](#epics)
-    2. [User Stories](#user-stories)
+    1. 
+    - [Epics](#epics)
+    - [User Stories](#user-stories)
 3. [Hypotheses and validation](#3-hypotheses-and-validation)
 4. [Rationale to map the business requirements to the Data Visualizations and ML tasks](#4-rationale-to-map-the-business-requirements-to-the-data-visualizations-and-ml-tasks)
 5. [ML Business Case](#5-ml-business-case)
