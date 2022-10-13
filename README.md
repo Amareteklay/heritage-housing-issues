@@ -194,12 +194,32 @@ In order to address the business requirements, we have the following epics and u
 ### **Page 1: Quick project summary**
 
 This page shows a quick summary of
+ 
+<details>
+<summary> the project's key terms and jargon</summary>
 
-* the project's key terms and jargon
+* **Sales price** of a house refers to the current market price of a house with certain attributes.
+* **Inherrited house** is a house that the client inheritted from grandparents.
+* **Summed price** was determined by adding the sales prices of the four inheritted houses.
+</details>
+ 
+<details>
+<summary> the project dataset</summary>
 
-* the project dataset
+* The project dataset comes from housing price database from Ames, Iowa. It is available in [Kaggle via Code Institute](https://www.kaggle.com/codeinstitute/housing-prices-data), and includes sales price (the target) and features that show a house's age (year built, year remodeled), property size (first floor area, second floor area, garaze area) and quality assessments."
+        
+</details>
+ 
+<details>
+<summary> the business requirements</summary>
 
-* the business requirements
+* The project has 2 business requirements:
+
+   * 1 - The client is interested in discovering how house attributes correlate with sale prices.Therefore, the client expects data visualizations of the correlated variables against the sale price.
+   
+   * 2 - The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+
+</details>
 
 <details>
 <summary>Page 1: Quick project summary (Screenshot)</summary>
