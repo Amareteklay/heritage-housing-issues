@@ -1,12 +1,12 @@
 import streamlit as st
 import pandas as pd
 from src.data_management import load_housing_data, load_heritage_data, load_pkl_file
-from src.machine_learning.predictive_analysis_ui import predict_price, predict_inheritted_house_price 
+from src.machine_learning.predictive_analysis_ui import predict_price, predict_inherited_house_price 
 
 def page_predict_price_body():
 	
 	# load predict price files
-	version = 'v1'
+	version = 'v2'
 	regression_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")
 	house_features = (pd.read_csv(f"outputs/ml_pipeline/predict_price/{version}/X_train.csv")
 					.columns
@@ -24,19 +24,19 @@ def page_predict_price_body():
 
 	st.write(f"###### Predicted sales price of inherited houses")
 
-	X_inheritted = load_heritage_data()
+	X_inherited = load_heritage_data()
 	summed_price = 0
 	predicted_sale_price = []
-	for i in range(X_inheritted.shape[0]):
-		pprice = predict_inheritted_house_price(X_inheritted.iloc[[i,]], house_features, regression_pipe)
+	for i in range(X_inherited.shape[0]):
+		pprice = predict_inherited_house_price(X_inherited.iloc[[i,]], house_features, regression_pipe)
 		predicted_sale_price.append(round(pprice))
 		summed_price = summed_price + pprice
 		summed_price = round(summed_price)
-	X_inheritted = X_inheritted.filter(house_features)
-	X_inheritted['PredictedSalePrice'] = predicted_sale_price
-	st.write(X_inheritted.head())
+	X_inherited = X_inherited.filter(house_features)
+	X_inherited['PredictedSalePrice'] = predicted_sale_price
+	st.write(X_inherited.head())
 	st.write(f"* Summed price: **{summed_price}** \n"
-	         f"* Features used: **{X_inheritted.columns.to_list()}**."
+	         f"* Features used: **{X_inherited.columns.to_list()}**."
 			 )
 	
 	st.write("---")
