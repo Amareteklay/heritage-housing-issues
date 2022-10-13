@@ -85,53 +85,59 @@ def DrawInputsWidgets():
 	# from here on we draw the widget based on the variable type (numerical or categorical)
 	# and set initial values
 	with col1:
-		feature = "2ndFlrSF"
-		st_widget = st.selectbox(
+		feature = "TotalSF"
+		st_widget = st.number_input(
 			label= feature,
-			options= df[feature].unique()
+			min_value= int(df[feature].min()*percentageMin), 
+			max_value= int(df[feature].max()*percentageMax),
+			value= int(df[feature].median()), 
+            step= 50
 			)
 	X_live[feature] = st_widget
 
 
 	with col2:
 		feature = "GarageArea"
-		st_widget = st.selectbox(
+		st_widget = st.number_input(
 			label= feature,
-			options= df[feature].unique()
+			min_value= int(df[feature].min()*percentageMin), 
+			max_value= int(df[feature].max()*percentageMax),
+			value= int(df[feature].median()), 
+            step= 50
 			)
 	X_live[feature] = st_widget
 
 
 	with col3:
-		feature = "KitchenQual"
-		st_widget = st.selectbox(
+		feature = "YearBuilt"
+		st_widget = st.number_input(
 			label= feature,
-			options= df[feature].unique()
+			min_value= int(df[feature].min()*percentageMin), 
+			max_value= date.today().year,
+			value= int(df[feature].median()), 
+            step= 1
 			)
 	X_live[feature] = st_widget
 
 	with col4:
-		feature = "TotalBsmtSF"
-		st_widget = st.selectbox(
+		feature = "KitchenQual"
+		st_widget = st.number_input(
 			label= feature,
-			options= df[feature].unique()
+			min_value= 0, 
+			max_value= 10,
+			value= int(df[feature].median()), 
+            step = 1       
 			)
 	X_live[feature] = st_widget
 
 	with col5:
-		feature = "YearBuilt"
-		st_widget = st.selectbox(
-			label= feature,
-			options= df[feature].unique()
-			)
-	X_live[feature] = st_widget
-
-
-	with col6:
 		feature = "YearRemodAdd"
-		st_widget = st.selectbox(
+		st_widget = st.number_input(
 			label= feature,
-			options= df[feature].unique()
+			min_value= int(df[feature].min()*percentageMin), 
+			max_value= date.today().year,
+			value= int(df[feature].median()), 
+            step= 1
 			)
 	X_live[feature] = st_widget
 
