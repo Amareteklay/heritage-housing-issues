@@ -265,14 +265,14 @@ After identifying the features most correlated with the target variable, we anal
 
 <details>
 <summary>Click here to toggle plots</summary>
-<img src="docs/plots/scatter_plot_price_by_1stFlrSF.png">
-<img src="docs/plots/scatter_plot_price_by_GarageArea.png">
-<img src="docs/plots/scatter_plot_price_by_GrLivArea.png">
+<img src="docs/plots/lm_plot_price_by_1stFlrSF.png">
+<img src="docs/plots/lm_plot_price_by_GarageArea.png">
+<img src="docs/plots/lm_plot_price_by_GrLivArea.png">
 <img src="docs/plots/box_plot_price_by_KichenQual.png">
-<img src="docs/plots/scatter_plot_price_by_MasVnrArea.png">
-<img src="docs/plots/scatter_plot_price_by_OpenPorchSF.png">
+<img src="docs/plots/lm_plot_price_by_MasVnrArea.png">
+<img src="docs/plots/lm_plot_price_by_OpenPorchSF.png">
 <img src="docs/plots/box_plot_price_by_OverallQual.png">
-<img src="docs/plots/scatter_plot_price_by_TotalBsmtSF.png">
+<img src="docs/plots/lm_plot_price_by_TotalBsmtSF.png">
 <img src="docs/plots/line_plot_price_by_YearBuilt.png">
 <img src="docs/plots/line_plot_price_by_YearRemodAdd.png">
 </details>
