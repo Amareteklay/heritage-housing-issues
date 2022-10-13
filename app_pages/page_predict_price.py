@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from datetime import date
 from src.data_management import load_housing_data, load_heritage_data, load_pkl_file
 from src.machine_learning.predictive_analysis_ui import predict_price, predict_inherited_house_price 
 
@@ -25,6 +26,7 @@ def page_predict_price_body():
 	st.write(f"###### Predicted sales price of inherited houses")
 
 	X_inherited = load_heritage_data()
+	X_inherited['TotalSF'] = X_inherited['TotalBsmtSF'] + X_inherited['1stFlrSF'] + X_inherited['2ndFlrSF']
 	summed_price = 0
 	predicted_sale_price = []
 	for i in range(X_inherited.shape[0]):
@@ -69,6 +71,7 @@ def DrawInputsWidgets():
 
 	# load dataset
 	df = load_housing_data()
+	df['TotalSF'] = df['TotalBsmtSF'] + df['1stFlrSF'] + df['2ndFlrSF']
 	
 	percentageMin, percentageMax = 0.4, 2.0
 
@@ -121,12 +124,10 @@ def DrawInputsWidgets():
 
 	with col4:
 		feature = "KitchenQual"
-		st_widget = st.number_input(
+		options = ['Excellent', 'Average']
+		st_widget = st.selectbox(
 			label= feature,
-			min_value= 0, 
-			max_value= 10,
-			value= int(df[feature].median()), 
-            step = 1       
+			options= df[feature].unique()
 			)
 	X_live[feature] = st_widget
 
@@ -140,7 +141,5 @@ def DrawInputsWidgets():
             step= 1
 			)
 	X_live[feature] = st_widget
-
-	# st.write(X_live)
 
 	return X_live
