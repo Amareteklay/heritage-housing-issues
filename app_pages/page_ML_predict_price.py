@@ -11,9 +11,8 @@ def page_ml_predict_price_body():
     performance plots 
     """
     # load price pipeline files
-    version = 'v1'
+    version = 'v2'
     price_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")
-    data_cleaning_pipe = load_pkl_file(f"outputs/ml_pipeline/data_cleaning/dataCleaning_pipeline.pkl")
     price_feat_importance = plt.imread(f"outputs/ml_pipeline/predict_price/{version}/features_importance.png")
     X_train = pd.read_csv(f"outputs/ml_pipeline/predict_price/{version}/X_train.csv")
     X_test = pd.read_csv(f"outputs/ml_pipeline/predict_price/{version}/X_test.csv")
@@ -33,9 +32,8 @@ def page_ml_predict_price_body():
 
     # show pipeline steps
     st.write("* ML pipeline to clean the data ")
-    st.write(data_cleaning_pipe)
     st.write("* ML pipeline to predict sales prices of houses ")
-    st.write(price_pipe)
+    st.code(price_pipe)
     st.write("---")
 
     # show best features
