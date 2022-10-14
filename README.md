@@ -268,7 +268,7 @@ After identifying the features most correlated with the target variable, we anal
 <img src="docs/plots/lm_plot_price_by_1stFlrSF.png">
 <img src="docs/plots/lm_plot_price_by_GarageArea.png">
 <img src="docs/plots/lm_plot_price_by_GrLivArea.png">
-<img src="docs/plots/box_plot_price_by_KichenQual.png">
+<img src="docs/plots/box_plot_price_by_KitchenQual.png">
 <img src="docs/plots/lm_plot_price_by_MasVnrArea.png">
 <img src="docs/plots/lm_plot_price_by_OpenPorchSF.png">
 <img src="docs/plots/box_plot_price_by_OverallQual.png">
