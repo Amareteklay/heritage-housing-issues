@@ -79,9 +79,9 @@ Our client found a public dataset with house prices for Ames, Iowa, and has prov
 
 We have agreed with our client on the following business requirements.
 
-* 1 - (BR1) The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
+* **BR1** - The client is interested in discovering how the house attributes correlate with the sale price. Therefore, the client expects data visualizations of the correlated variables against the sale price to show that.
 
-* 2 - (BR2) The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
+* **BR2** - The client is interested to predict the house sales price from her 4 inherited houses, and any other house in Ames, Iowa.
 
 In order to address the business requirements, we have the following epics and user stories. Each user story was then broken down to manageable stasks, and the agile process was used to implement each task. 
 
@@ -215,9 +215,9 @@ This page shows a quick summary of
 
 * The project has 2 business requirements:
 
-   * 1 - The client is interested in discovering how house attributes correlate with sale prices.Therefore, the client expects data visualizations of the correlated variables against the sale price.
+   * **BR1** - The client is interested in discovering how house attributes correlate with sale prices.Therefore, the client expects data visualizations of the correlated variables against the sale price.
    
-   * 2 - The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
+   * **BR2** - The client is interested in predicting the house sale prices from her 4 inherited houses, and any other house in Ames, Iowa.
 
 </details>
 
@@ -226,7 +226,7 @@ This page shows a quick summary of
 <img src="docs/screenshots/page -1.png">
 </details>
 
-### **Page 2: House prices Correlation Study**
+### **Page 2: House prices Correlation Study (BR1)**
 
 This page shows
 * the business requirement that was handled by correlation study.
@@ -301,7 +301,7 @@ After identifying the features most correlated with the target variable, we anal
 <img src="docs/screenshots/page -3.png">
 </details>
 
-### **Page 4: Predict House price**
+### **Page 4: Predict House price (BR2)**
 
 * State business requirement 2
 

@@ -15,9 +15,9 @@ def page_predict_price_body():
 					)
 
 
-	st.write("### Predicting sales price of inherited houses")
+	st.write("### Predicting sales price of inherited houses (BR2)")
 	st.info(
-       f"* The client is interested in predicting the house sale prices from her 4 inherited houses,"
+       f"* **BR2** - The client is interested in predicting the house sale prices from her 4 inherited houses,"
        f" and any other house in Ames, Iowa."
 	)
 

@@ -17,17 +17,18 @@ def page_correlation_study_body():
 
     vars_to_study = ['1stFlrSF', 'GarageArea', 'GrLivArea', 'KitchenQual', 'MasVnrArea', 'OpenPorchSF', 'OverallQual', 'TotalBsmtSF', 'YearBuilt', 'YearRemodAdd']
 
-    st.write("### Housing Prices Correlation Study")
+    st.write("### Housing Prices Correlation Study (BR1)")
     st.info(
-        f"* The client is interested in identifying the features that have strong correlation with "
-        f"house prices so that she can maximize the sales revenue."
+        f"* **BR1** - The client is interested in discovering how house attributes correlate with sale prices.\
+             Therefore, the client expects data visualizations of the correlated variables against the sale price. "
     )
 
     # inspect data
     if st.checkbox("Inspect Housing Data"):
         st.write(
-            f"* The dataset has {df.shape[0]} rows and {df.shape[1]} columns, "
-            f"find below the first 10 rows.")
+            f"* The dataset has {df.shape[0]} rows and {df.shape[1]} columns.\
+                 We show the first 10 rows below.\n"
+            f"* SalePrice is our target variable, and we want to identify features correlated to it.")
         
         st.write(df.head(10))
 
@@ -36,18 +37,24 @@ def page_correlation_study_body():
 
     # Correlation Study Summary
     st.write(
-        f"* A correlation study was conducted in the notebook to better understand how "
-        f"the variables are correlated to Churn levels. \n"
-        f"The most correlated variable are: **{vars_to_study}**"
+        f"* We conducted a correlation study the notebook to better understand how "
+        f"the variables are correlated to sale price of a property.\
+         This addresses the first business requirement (BR1) of the project. \n"
+        f"* We found that the most correlated variable are:\n **{vars_to_study}**"
     )
 
 
     # Text based on "03 - Correlation_Study" notebook - "Conclusions and Next steps" section
     st.info(
-        f"We make the following observations from both the correlation analysis and the plots.\n"
-        f"* Higher values of 1stFlrSF, garage area, GrLivArea, MasVnrArea and TotalBsmtSF are associated with higher sale price.\n"
-        f"* Houses with recently built garages or recently added remods have higher prices than those of earlier ones.\n"  
-        f"* Higher Overall quality indicates higher sale prices but kitchen quality does not show clear pattern.\n" 
+        f"We make the following observations from both the correlation analysis and the plots (particularly the heatmaps below).\n"
+        f"* Higher values of 1stFlrSF, GarageArea, GrLivArea, MasVnrArea and TotalBsmtSF are associated with higher sale price.\n"
+        f"* Recently built houses (YearBuilt) and houses with recently added remodel (YearRemodAdd) have typically higher prices.\n"  
+        f"* Features that represent the quality of a property (KitchenQual and OverallQual) are also positively correlated to sale price of a house.\n\n" 
+        f"While the plots corroborate these observations, we also note,\
+         from the plots of sale price against the correlated features,\
+         that the relationships become less clear at higher values of the variables.\n"
+        f"* When the size of 1stFlrSF is around 2500, for example, sale price can be low or it can be very high.\n"
+        f"* We see similar pattern in the regression plot of sale price and GarageArea when the latter's value is around 800.\n"
     )
 
 
