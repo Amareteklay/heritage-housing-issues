@@ -53,7 +53,7 @@ def page_correlation_study_body():
 
     df_eda = df.filter(vars_to_study + ['SalePrice'])
 
-
+    st.write("#### Data visualizations")
     # Individual plots per variable
     if st.checkbox("House Prices per Variable"):
         house_price_per_variable(df_eda)
