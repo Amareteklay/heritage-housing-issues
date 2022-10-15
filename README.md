@@ -189,6 +189,8 @@ In order to address the business requirements, we have the following epics and u
 
   * Features: all remaining variables.
 
+<img src="docs/screenshots/pipeline steps.png">
+
 ## **6. Dashboard Design**
 
 ### **Page 1: Quick project summary**
