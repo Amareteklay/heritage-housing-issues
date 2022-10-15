@@ -23,7 +23,8 @@ def page_predict_price_body():
 
 	# Predict sales prices of inherited houses
 
-	st.write(f"###### Predicted sales price of inherited houses")
+	st.write(f"###### Predicted sales price of 4 inherited houses\n"
+			 f"* See PredictedSalePrice column in the table below.")
 
 	X_inherited = load_heritage_data()
 	X_inherited['TotalSF'] = X_inherited['TotalBsmtSF'] + X_inherited['1stFlrSF'] + X_inherited['2ndFlrSF']
@@ -37,14 +38,17 @@ def page_predict_price_body():
 	X_inherited = X_inherited.filter(house_features)
 	X_inherited['PredictedSalePrice'] = predicted_sale_price
 	st.write(X_inherited.head())
-	st.write(f"* Summed price: **{summed_price}** \n"
-	         f"* Features used: **{X_inherited.columns.to_list()}**."
+	st.write(f"* Summed price: **${summed_price}** \n"
+	         f"* Features used: **{X_inherited.columns.to_list()}**.\n"
+			 f"The Machine Learning model successfully predicted the sale\
+				 prices of the 4 inherited houses, and we were able to find\
+					 the summed value of the properties in question."
 			 )
 	
 	st.write("---")
 	# Generate Live Data
 	# check_variables_for_UI(price_features)
-	st.write("### House Price Predictor Interface")
+	st.write("### House Price Predictor Interface (BR2)")
 	
 	st.write("#### Do you want to predict sale price of another house?")
 	st.write("Provide the correct values of the following attributes and click on the 'Predict Sale Price' button.")
