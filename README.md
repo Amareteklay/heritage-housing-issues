@@ -66,9 +66,9 @@ The table below indicates the variables, their description and units of measurem
 
 * **Sale price** of a house refers to the current market price of a house with certain attributes.
 
-* **Inherited house** is a house that the client inheritted from grandparents.
+* **Inherited house** is a house that the client inherited from grandparents.
 
-* **Summed price** is the total of the sale prices of the four inheritted houses.
+* **Summed price** is the total of the sale prices of the four inherited houses.
 
 ## **2. Business Requirements**
 Our client, who has received an inheritance from a deceased great-grandfather located in Ames, Iowa, has requested us to  help in maximizing the sales price for the inherited properties.
@@ -123,21 +123,21 @@ In order to address the business requirements, we have the following epics and u
 
 ## **3. Hypotheses and validation**
 
-1. Size matters. Variables that are associated with the size of the house are positively correlated to sale price.
+1. Size matters. We hypothesize that larger the property, the higher its sale price will be.
 
    * We will examine correlations between attributes about the size of the house and the sale price.
 
-2. Ratings of the quality and condition of the house reflect its value and thus higher ratings indicate higher sale price.
+2. Quality matters. Ratings of the quality and condition of the house would reflect its value, and thus we suspect that higher quality ratings indicate higher sale price.
 
-   * We will use the correlation between variables about the different ratings of the house and the sale price to validate this hypothesis.
+   * We will use the correlation between variables about the different ratings of the house such as kitchen quality and overall quality, and the sale price to validate this hypothesis.
 
-3. Age of the house is expected to have significant influence on the sale price of the house.
+3. Time matters. We expect that the value of a property will be significantly influenced by how old the property is and/or whether it had any remodel added to it recently.
 
-   * We study when the house was built and how expensive it is to test this hypothesis.
+   * We study when the house was built and/or when it had a remodel added and the value of the property to validate this hypothesis.
 
 ## **4. Rationale to map the business requirements to the Data Visualizations and ML tasks**
 
-* **Business Requirement 1:** Data Visualization and Correlation study
+* **Business Requirement 1 (BR1):** Data Visualization and Correlation study
 
   * We will inspect the sale price of the houses in the data and plot a histogram to understand its distribution.
 
@@ -148,7 +148,7 @@ In order to address the business requirements, we have the following epics and u
   * The [correlation study notebook](https://github.com/Amareteklay/heritage-housing-issues/blob/main/jupyter_notebooks/03%20-%20Correlation_Study.ipynb) handles this business requirement.
 
 
-* **Business Requirement 2:** Regression Analysis
+* **Business Requirement 2 (BR2):** Regression Analysis
 
   * As the target variable we are interested to predict is continuous, we will use regression analysis to address this business requirement. In case the performance of our regression model is poor, we may change this to a classification problem.
 
@@ -161,7 +161,7 @@ In order to address the business requirements, we have the following epics and u
 ### **Predict Sale Price**
 #### **Regression Model**
 
-* In order to meet the second business requirements, we want to train a Machine Learning model.
+* In order to meet the second business requirement (BR2), we want to train a Machine Learning model.
 
 * *The aim behind the Machine Learning model* is to enable our client to predict sale price of four inherited houses as well as any house with similar attributes. 
 
@@ -199,8 +199,8 @@ This page shows a quick summary of
 <summary> the project's key terms and jargon</summary>
 
 * **Sales price** of a house refers to the current market price of a house with certain attributes.
-* **Inherrited house** is a house that the client inheritted from grandparents.
-* **Summed price** was determined by adding the sales prices of the four inheritted houses.
+* **Inherrited house** is a house that the client inherited from grandparents.
+* **Summed price** was determined by adding the sales prices of the four inherited houses.
 </details>
  
 <details>
@@ -233,9 +233,11 @@ This page shows
 * a checkbox for inspecting the dataset
 * a listing of findings related to which features have the strongest correlation to the house sale price.
 * a checkbox for displaying plots of sale price and each of the features that have strong correlation. This section of the page displays:
-  * scatter plots of sale price and each of the continuous numerical features
+  * the distribution of the target variable (sale price)
+  * regression plots of sale price and each of the continuous numerical features
   * box plots of sale price and each of the categorical features
   * line graphs of sale price and each of the time variables
+  * heatmaps showing correlations
 
 <details>
 <summary>Pearson Correlation Heatmap</summary>
@@ -284,17 +286,17 @@ After identifying the features most correlated with the target variable, we anal
 
 ### **Page 3: Project hypotheses and validation**
 
-1. Size matters. Variables that are associated with the size of the house are positively correlated to sale price.
+1. **H1 - Size matters.** We hypothesize that larger the property, the higher its sale price will be.
 
-   * We will examine correlations between attributes about the size of the house and the sale price.
+**Correct.** From the correlation study results, we found that features that reflect the size of a property were positively and moderately correlated with sale price.
 
-2. Ratings of the quality and condition of the house reflect its value and thus higher ratings indicate higher sale price.
+2. **H2 - Quality matters.** Ratings of the quality and condition of the house would reflect its value, and thus we suspect that higher quality ratings indicate higher sale price.
 
-   * We will use the correlation between variables about the different ratings of the house and the sale price to validate this hypothesis.
+**Correct.** We used the correlation between sale price and the kitchen quality and overall quality ratings to show that this is indeed the case.
 
-3. Age of the house is expected to have significant influence on the sale price of the house.
+**H3 - Time matters.** We expect that the value of a property will be significantly influenced by how old the property is and/or whether it had any remodel added to it recently.
 
-   * We study when the house was built and how expensive it is to test this hypothesis.
+**Correct.** We validated this hypothesis by studying the correlation between the sale price and the years it was built and/or had a remodel added to it. Both features have moderate positive correlation with sale price.
 
 <details>
 <summary>Page 3: Project hypotheses and validation (Screenshot)</summary>
