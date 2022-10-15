@@ -189,7 +189,11 @@ In order to address the business requirements, we have the following epics and u
 
   * Features: all remaining variables.
 
+<details>
+<summary> Pipeline steps</summary>
 <img src="docs/screenshots/pipeline steps.png">
+</details>
+
 
 ## **6. Dashboard Design**
 
@@ -198,7 +202,7 @@ In order to address the business requirements, we have the following epics and u
 This page shows a quick summary of
  
 <details>
-<summary> the project's key terms and jargon</summary>
+<summary> The project's key terms and jargon</summary>
 
 * **Sales price** of a house refers to the current market price of a house with certain attributes.
 * **Inherrited house** is a house that the client inherited from grandparents.
@@ -206,14 +210,14 @@ This page shows a quick summary of
 </details>
  
 <details>
-<summary> the project dataset</summary>
+<summary> The project dataset</summary>
 
 * The project dataset comes from housing price database from Ames, Iowa. It is available in [Kaggle via Code Institute](https://www.kaggle.com/codeinstitute/housing-prices-data), and includes sales price (the target) and features that show a house's age (year built, year remodeled), property size (first floor area, second floor area, garaze area) and quality assessments."
         
 </details>
  
 <details>
-<summary> the business requirements</summary>
+<summary> The business requirements</summary>
 
 * The project has 2 business requirements:
 
