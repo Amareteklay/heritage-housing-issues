@@ -7,7 +7,7 @@ from src.machine_learning.predictive_analysis_ui import predict_price, predict_i
 def page_predict_price_body():
 	
 	# load predict price files
-	version = 'v3'
+	version = 'v4'
 	regression_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")
 	house_features = (pd.read_csv(f"outputs/ml_pipeline/predict_price/{version}/X_train.csv")
 					.columns
@@ -92,18 +92,6 @@ def DrawInputsWidgets():
 	# from here on we draw the widget based on the variable type (numerical or categorical)
 	# and set initial values
 	with col1:
-		feature = "TotalSF"
-		st_widget = st.number_input(
-			label= feature,
-			min_value= int(df[feature].min()*percentageMin), 
-			max_value= int(df[feature].max()*percentageMax),
-			value= int(df[feature].median()), 
-            step= 50
-			)
-	X_live[feature] = st_widget
-
-
-	with col2:
 		feature = "GarageArea"
 		st_widget = st.number_input(
 			label= feature,
@@ -112,31 +100,45 @@ def DrawInputsWidgets():
 			value= int(df[feature].median()), 
             step= 50
 			)
+		
 	X_live[feature] = st_widget
 
 
-	with col3:
-		feature = "YearBuilt"
+	with col2:
+		feature = "GrLivArea"
 		st_widget = st.number_input(
 			label= feature,
 			min_value= int(df[feature].min()*percentageMin), 
-			max_value= date.today().year,
+			max_value= int(df[feature].max()*percentageMax),
 			value= int(df[feature].median()), 
-            step= 1
+            step= 50
+			)
+	X_live[feature] = st_widget
+
+	with col3:
+		feature = "OverallQual"
+		st_widget = st.number_input(
+			label= feature,
+			min_value= 1, 
+			max_value= 10,
+			value= 5, 
+            step=1
 			)
 	X_live[feature] = st_widget
 
 	with col4:
-		feature = "KitchenQual"
-		options = ['Excellent', 'Average']
-		st_widget = st.selectbox(
+		feature = "TotalBsmtSF"
+		st_widget = st.number_input(
 			label= feature,
-			options= df[feature].unique()
+			min_value= int(df[feature].min()*percentageMin), 
+			max_value= int(df[feature].max()*percentageMax),
+			value= int(df[feature].median()), 
+            step= 50
 			)
 	X_live[feature] = st_widget
 
 	with col5:
-		feature = "YearRemodAdd"
+		feature = "YearBuilt"
 		st_widget = st.number_input(
 			label= feature,
 			min_value= int(df[feature].min()*percentageMin), 

@@ -11,7 +11,7 @@ def page_ml_predict_price_body():
     performance plots 
     """
     # load price pipeline files
-    version = 'v3'
+    version = 'v4'
     price_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")
     price_feat_importance = plt.imread(f"outputs/ml_pipeline/predict_price/{version}/features_importance.png")
     X_train = pd.read_csv(f"outputs/ml_pipeline/predict_price/{version}/X_train.csv")
@@ -29,7 +29,7 @@ def page_ml_predict_price_body():
                  attributes. We were able to achieve this success metric, but we trained different\
                  versions of the model to make sure that we don't pverlook potential improvement.\n"
         f"* The pipeline performance for the best model on the train and test set is\
-             R2 == 0.99 and R2 == 0.79 respectively.\n"
+             R2 == 0.84 and R2 == 0.77 respectively.\n"
         f"* We present the pipeline steps, best features list along with feature importance plot, pipeline performance and regression performance report below. "
        )
     st.write("---")
