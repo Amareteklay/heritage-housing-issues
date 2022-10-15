@@ -59,8 +59,12 @@ def page_correlation_study_body():
 
 
     df_eda = df.filter(vars_to_study + ['SalePrice'])
-
+    target_var = 'SalePrice'
     st.write("#### Data visualizations")
+    # Distribution of target variable
+    if st.checkbox("Distribution of Variable"):
+        plot_target_hist(df_eda, target_var) 
+
     # Individual plots per variable
     if st.checkbox("House Prices per Variable"):
         house_price_per_variable(df_eda)
@@ -93,18 +97,25 @@ def house_price_per_variable(df_eda):
                 plot_line(df_eda, col, target_var)
                 print("\n\n")
             else:
-                plot_lm(df_eda, col, target_var)
+                plot_reg(df_eda, col, target_var)
                 print("\n\n")
 
+def plot_target_hist(df, target_var):
+  """
+  Function to plot a histogram of the target variable
+  """
+  fig, axes = plt.subplots(figsize=(12, 6))
+  sns.histplot(data=df, x=target_var, kde=True)
+  plt.title(f"Distribution of {target_var}", fontsize=20)       
+  st.pyplot(fig)
 
-
-def plot_lm(df, col, target_var):
+def plot_reg(df, col, target_var):
     """
     Generate scatter plot
     """
     fig, axes = plt.subplots(figsize=(12, 6))
     sns.regplot(data=df, x=col, y=target_var, ci=None)
-    plt.title(f"{col}", fontsize=20)        
+    plt.title(f"Regression plot of {target_var} against {col}", fontsize=20)        
     st.pyplot(fig) # st.pyplot() renders image, in notebook is plt.show()
 
 def plot_line(df, col, target_var):
@@ -113,7 +124,7 @@ def plot_line(df, col, target_var):
     """
     fig, axes = plt.subplots(figsize=(12, 6))
     sns.lineplot(data=df, x=col, y=target_var)
-    plt.title(f"{col}", fontsize=20)        
+    plt.title(f"Line plot of {target_var} against {col}", fontsize=20)        
     st.pyplot(fig) # st.pyplot() renders image, in notebook is plt.show()
 
 def plot_box(df, col, target_var):
@@ -122,7 +133,7 @@ def plot_box(df, col, target_var):
     """
     fig, axes = plt.subplots(figsize=(12, 6))
     sns.boxplot(data=df, x=col, y=target_var) 
-    plt.title(f"{col}", fontsize=20)
+    plt.title(f"Box plot of {target_var} against {col}", fontsize=20)
     st.pyplot(fig) # st.pyplot() renders image, in notebook is plt.show()
 
 ## Heatmaps
