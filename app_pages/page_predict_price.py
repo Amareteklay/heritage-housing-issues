@@ -7,7 +7,7 @@ from src.machine_learning.predictive_analysis_ui import predict_price, predict_i
 def page_predict_price_body():
 	
 	# load predict price files
-	version = 'v2'
+	version = 'v3'
 	regression_pipe = load_pkl_file(f"outputs/ml_pipeline/predict_price/{version}/regression_pipeline.pkl")
 	house_features = (pd.read_csv(f"outputs/ml_pipeline/predict_price/{version}/X_train.csv")
 					.columns
@@ -39,7 +39,7 @@ def page_predict_price_body():
 	X_inherited['PredictedSalePrice'] = predicted_sale_price
 	st.write(X_inherited.head())
 	st.write(f"* Summed price: **${summed_price}** \n"
-	         f"* Features used: **{X_inherited.columns.to_list()}**.\n"
+	         f"* Features used: **{X_inherited.columns.to_list()[:-1]}**.\n"
 			 f"The Machine Learning model successfully predicted the sale\
 				 prices of the 4 inherited houses, and we were able to find\
 					 the summed value of the properties in question."
